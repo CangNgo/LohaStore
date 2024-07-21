@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box-banner-hoalen {
+    height: 300px;
+}
+
+.box-banner-hoalen .img-banner {
+    height: 100%;
+}
+
+.box-banner-hoalen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page .c-btn-pagination a {
+    color: #000 !important;
+}
+
+.page .background-page a {
+    background-color: #fbb2b2 !important;
+    color: #000 !important;
+}
+
+.page .c-btn-pagination:hover a {
+    background-color: #fbb2b2;
+}
