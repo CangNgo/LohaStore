@@ -1,11 +1,9 @@
 ﻿-- Tạo database
 CREATE DATABASE BANHANG;
 GO
-
 -- Sử dụng database vừa tạo
 USE BANHANG;
 GO
-
 --Tạo bảng taikhoan
 CREATE TABLE TAIKHOAN(
 	ID INT PRIMARY KEY IDENTITY(1,1), 
@@ -14,7 +12,6 @@ CREATE TABLE TAIKHOAN(
 	VAITRO BIT DEFAULT 1
 );
 GO
-
 -- Tạo bảng KhachHang
 CREATE TABLE KhachHang (
     ID_KhachHang INT PRIMARY KEY IDENTITY(1,1),
@@ -27,14 +24,14 @@ CREATE TABLE KhachHang (
     NgayDangKy DATETIME DEFAULT GETDATE(),
 	FOREIGN KEY(ID_TAIKHOAN) REFERENCES TAIKHOAN (ID)
 );
-
+go
 -- Tạo bảng LoaiSanPham
 CREATE TABLE LoaiSanPham (
     ID_LoaiSanPham INT PRIMARY KEY IDENTITY(1,1),
     TenLoai NVARCHAR(100) NOT NULL,
     MoTa NVARCHAR(255)
 );
-
+go
 -- Tạo bảng SanPham
 CREATE TABLE SanPham (
     ID_SanPham INT PRIMARY KEY IDENTITY(1,1),
@@ -46,26 +43,27 @@ CREATE TABLE SanPham (
     HinhAnh VARCHAR(255),
     FOREIGN KEY (ID_LoaiSanPham) REFERENCES LoaiSanPham(ID_LoaiSanPham)
 );
-
--- Tạo bảng GioHang
+go
+-- Tạo bảng GioHang (đã sửa)
 CREATE TABLE GioHang (
-    ID_GioHang INT PRIMARY KEY IDENTITY(1,1),
-    ID_KhachHang INT,
-    FOREIGN KEY (ID_KhachHang) REFERENCES KhachHang(ID_KhachHang)
+  ID_GioHang INT PRIMARY KEY IDENTITY(1,1),
+  ID_KhachHang INT,
+  NgayTao DATETIME DEFAULT GETDATE(),
+  TrangThai NVARCHAR(50),
+  FOREIGN KEY (ID_KhachHang) REFERENCES KhachHang(ID_KhachHang)
 );
-
-
--- Tạo bảng ChiTietGioHang
+go
+-- Tạo bảng ChiTietGioHang (đã sửa)
 CREATE TABLE ChiTietGioHang (
-    ID_ChiTietGioHang INT PRIMARY KEY IDENTITY(1,1),
-    ID_GioHang INT,
-    ID_SanPham INT,
-    SoLuong INT NOT NULL,
-    GiaTaiThoiDiemThem DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (ID_GioHang) REFERENCES GioHang(ID_GioHang),
-    FOREIGN KEY (ID_SanPham) REFERENCES SanPham(ID_SanPham)
+  ID_ChiTietGioHang INT PRIMARY KEY IDENTITY(1,1),
+  ID_GioHang INT,
+  ID_SanPham INT,
+  SoLuong INT NOT NULL,
+  GiaTaiThoiDiemThem DECIMAL(10,2),
+  FOREIGN KEY (ID_GioHang) REFERENCES GioHang(ID_GioHang),
+  FOREIGN KEY (ID_SanPham) REFERENCES SanPham(ID_SanPham)
 );
-
+go
 -- Tạo bảng DonHang
 CREATE TABLE DonHang (
     ID_DonHang INT PRIMARY KEY IDENTITY(1,1),
@@ -77,7 +75,7 @@ CREATE TABLE DonHang (
     PhuongThucThanhToan NVARCHAR(100),
     FOREIGN KEY (ID_KhachHang) REFERENCES KhachHang(ID_KhachHang)
 );
-
+go
 -- Tạo bảng ChiTietDonHang
 CREATE TABLE ChiTietDonHang (
     ID_ChiTietDonHang INT PRIMARY KEY IDENTITY(1,1),
@@ -88,9 +86,6 @@ CREATE TABLE ChiTietDonHang (
     FOREIGN KEY (ID_DonHang) REFERENCES DonHang(ID_DonHang),
     FOREIGN KEY (ID_SanPham) REFERENCES SanPham(ID_SanPham)
 );
-
--- INSERT DATA
-USE QuanLyBanHang;
 GO
 
 -- Insert dữ liệu vào bảng LoaiSanPham
@@ -129,15 +124,14 @@ VALUES
 ((SELECT ID_LoaiSanPham FROM LoaiSanPham WHERE TenLoai = 'mockhoa'), N'Vịt len đội mũ', N'Móc khóa hình vịt đội mũ làm từ len', 50000, 100, 'VITLENDOIMU.jpg');
 GO
 -- Tạo khách hàng mẫu
-Tất nhiên, tôi sẽ điều chỉnh câu lệnh tạo bảng TAIKHOAN và câu lệnh INSERT cho bảng KhachHang để phù hợp với yêu cầu của bạn. Đây là các câu lệnh SQL đã được điều chỉnh:
-sqlCopy-- Tạo bảng TAIKHOAN
+-- Tạo bảng TAIKHOAN
 CREATE TABLE TAIKHOAN(
     ID INT PRIMARY KEY IDENTITY(1,1), 
     TAIKHOAN VARCHAR(30) NOT NULL, 
     MATKHAU VARCHAR(50) NOT NULL, 
     VAITRO BIT DEFAULT 1
 );
-
+go
 -- Insert dữ liệu vào bảng TAIKHOAN
 INSERT INTO TAIKHOAN (TAIKHOAN, MATKHAU, VAITRO)
 VALUES 
@@ -216,3 +210,16 @@ BEGIN
     SET @i = @i + 1;
 END
 GO
+
+-- Bước 1: Thêm một giỏ hàng mới cho khách hàng có ID = 2
+INSERT INTO GioHang (ID_KhachHang, NgayTao, TrangThai)
+VALUES (2, GETDATE(), 'Đang xử lý');
+
+-- Bước 2: Lấy ID của giỏ hàng vừa tạo
+DECLARE @GioHangID INT = SCOPE_IDENTITY();
+
+-- Bước 3: Thêm các sản phẩm vào giỏ hàng
+INSERT INTO ChiTietGioHang (ID_GioHang, ID_SanPham, SoLuong, GiaTaiThoiDiemThem)
+VALUES
+    (@GioHangID, 1, 2, (SELECT Gia FROM SanPham WHERE ID_SanPham = 1)),
+    (@GioHangID, 3, 1, (SELECT Gia FROM SanPham WHERE ID_SanPham = 3));

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="65ea84c1-adfa-4d53-974a-d8cc8e7cc6fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/SQLQuery1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Chitietsanpham.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/web/chitietsanpham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/CREATE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Dangky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Dangky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Dangnhap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Dangnhap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Doimatkhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Doimatkhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Giohang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Giohang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Hoalen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Hoalen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Layma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Layma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Lienhe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Lienhe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Mockhoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/controller/web/Mockhoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/IChitietdonhang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/IChitietgiohang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/IDonhang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/IGiohang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/IKhachhang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/ILoaisanpham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/ISanpham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Chitietdonhang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Chitietgiohang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Donhang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Giohang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Khachhang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Loaisanpham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/dao/impl/Sanpham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Chitietdonhang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Chitietdonhang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Chitietgiohang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Chitietgiohang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Donhang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Donhang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Giohang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/Giohang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/KhachHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/LoaiSanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/LoaiSanPham.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/model/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/model/SanPham.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/service/IChitietgiohangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/service/IChitietgiohangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/service/IGiohangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/service/IGiohangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/service/ISanphamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/service/ISanphamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/service/impl/ChitietgiohangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/service/impl/ChitietgiohangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/service/impl/GiohangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/service/impl/GiohangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cangngo/service/impl/SanphamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cangngo/service/impl/SanphamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/web/item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/web/item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/web/minimenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/web/minimenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/web/css/giohang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/web/css/giohang.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/web/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/web/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/account/dangnhap.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/account/dangnhap.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/giohang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/hoalen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/hoalen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/mockhoa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/mockhoa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Dangky.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Dangnhap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Doimatkhau.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Giohang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Hoalen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Layma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Lienhe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/controller/Mockhoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/model/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/classes/com/cangngo/model/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jakarta.activation-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jakarta.el-api-4.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jakarta.inject-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jakarta.xml.bind-api-3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jboss-logging-3.4.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/jsp-api-2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/mysql-connector-j-8.0.33.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/protobuf-java-3.21.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/servlet-api-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/lib/xstream-1.4.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/common/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/common/web/minimenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/common/web/minimenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/template/web/css/giohang.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/template/web/css/giohang.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/template/web/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/template/web/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/account/dangnhap.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/account/dangnhap.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/account/doimatkhau.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/account/doimatkhau.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/giohang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/hoalen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/hoalen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/mockhoa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LohaStore-1.0/views/web/mockhoa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangnhap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangnhap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Doimatkhau.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Doimatkhau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Giohang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Giohang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Hoalen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Hoalen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Layma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Layma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Lienhe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Lienhe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Mockhoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Mockhoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/IChitietdonhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/IChitietgiohang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/IDonhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/IGiohang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/IKhachhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/ILoaisanpham.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/ISanpham.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Chitietdonhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Chitietgiohang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Donhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Giohang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Khachhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Loaisanpham.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/dao/impl/Sanpham.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/AbstractModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/AbstractModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietdonhang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietdonhang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietgiohang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietgiohang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Donhang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Donhang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Giohang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Giohang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/KhachHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/KhachHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/LoaiSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/LoaiSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/SanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/SanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/IChitietgiohangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/IChitietgiohangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/IGiohangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/IGiohangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/ISanphamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/ISanphamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietdonhangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietdonhangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietgiohangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietgiohangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/Donhang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/Donhang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/GiohangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/GiohangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/KhachhangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/KhachhangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/LoaisanphamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/LoaisanphamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/SanphamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/SanphamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.cangngo/LohaStore/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.cangngo/LohaStore/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2jwFEEw9IAK1lkL8TzhZKle9aB1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Unnamed (1).executor&quot;: &quot;Run&quot;,
+    &quot;Smart Tomcat.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Smart Tomcat.Unnamed (1)">
+    <configuration name="Unnamed (1)" type="com.poratu.idea.plugins.tomcat" nameIsGenerated="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\acer\.SmartTomcat\LohaStore\LohaStore" />
+      <option name="contextPath" value="/LohaStore" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.25" />
+          <option name="path" value="$PROJECT_DIR$/../../Program Files/Apache Software Foundation/Tomcat 10.1" />
+          <option name="version" value="10.1.25.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="LohaStore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="com.poratu.idea.plugins.tomcat" nameIsGenerated="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\acer\.SmartTomcat\LohaStore\LohaStore" />
+      <option name="contextPath" value="/LohaStore" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.25" />
+          <option name="path" value="$PROJECT_DIR$/../../Program Files/Apache Software Foundation/Tomcat 10.1" />
+          <option name="version" value="10.1.25.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="LohaStore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="" />
+      <option name="docBase" value="" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.25" />
+          <option name="path" value="$PROJECT_DIR$/../../Program Files/Apache Software Foundation/Tomcat 10.1" />
+          <option name="version" value="10.1.25.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Smart Tomcat.Unnamed (1)" />
+      <item itemvalue="Smart Tomcat.Unnamed" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65ea84c1-adfa-4d53-974a-d8cc8e7cc6fb" name="Changes" comment="" />
+      <created>1722290126551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722290126551</updated>
+    </task>
+    <servers />
+  </component>
+</project>

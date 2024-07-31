@@ -1,32 +1,53 @@
 package com.cangngo.model;
 
-public class Chitietdonhang extends AbstractModel {
-	private int idDonhang;
-	private int idSanpham;
+import java.io.Serializable;
+import java.util.List;
+
+import com.cangngo.utils.JpaUtils;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "ChiTietDonHang")
+public class Chitietdonhang implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_ChiTietDonHang")
+	private int id;
+
+	@ManyToOne
+	@JoinColumn(name = "ID_DonHang")
+	private Donhang idDonhang;
+
+	@ManyToOne
+	@JoinColumn(name = "ID_SanPham")
+	private SanPham idSanpham;
+	@Column(name = "SoLuong")
 	private int soluong;
+	@Column(name = "GiaTaiThoiDiemMua")
 	private double giaTaiThoiDiemMua;
 
-	public Chitietdonhang(int idDonhang, int idSanpham, int soluong, double giaTaiThoiDiemMua) {
+	public Chitietdonhang(int id, Donhang idDonhang, SanPham idSanpham, int soluong, double giaTaiThoiDiemMua) {
 		super();
+		this.id = id;
 		this.idDonhang = idDonhang;
 		this.idSanpham = idSanpham;
 		this.soluong = soluong;
 		this.giaTaiThoiDiemMua = giaTaiThoiDiemMua;
 	}
 
-	public int getIdDonhang() {
+	public Donhang getIdDonhang() {
 		return idDonhang;
 	}
 
-	public void setIdDonhang(int idDonhang) {
+	public void setIdDonhang(Donhang idDonhang) {
 		this.idDonhang = idDonhang;
 	}
 
-	public int getIdSanpham() {
+	public SanPham getIdSanpham() {
 		return idSanpham;
 	}
 
-	public void setIdSanpham(int idSanpham) {
+	public void setIdSanpham(SanPham idSanpham) {
 		this.idSanpham = idSanpham;
 	}
 
@@ -48,6 +69,12 @@ public class Chitietdonhang extends AbstractModel {
 
 	public Chitietdonhang() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		EntityManager entity = JpaUtils.getEntityManager();
+		List<Chitietdonhang> listTK = entity.createQuery("select t from Chitietdonhang t",Chitietdonhang.class).getResultList();
+		System.out.println(listTK.get(1).getSoluong());
 	}
 
 }

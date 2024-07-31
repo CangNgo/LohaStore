@@ -7,7 +7,7 @@
     <div class="container from-login">
         <div class="row d-flex justify-content-center c-from-login">
             <div class="col-md-4 col-sm-8 wrapper rounded-3">
-                <form action="account/doi-mat-khau" name="forgotPassword" class="needs-validation" novalidate>
+                <form action="doi-mat-khau" name="forgotPassword" class="needs-validation" novalidate>
                     <h6 class="titleLogin text-center mb-5 fw-bold">Đổi mật khẩu</h6>
                     <div class="box_username box_input mb-4 text-white">
                         <label for="username" class="label-from"><i class="fa fa-user icon icon_username"></i>

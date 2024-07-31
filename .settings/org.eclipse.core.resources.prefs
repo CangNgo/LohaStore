@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/cangngo/controller/web/Giohang.java=UTF-8
+encoding//src/main/java/com/cangngo/dao/impl/ChitietgiohangDAO.java=UTF-8
+encoding//src/main/java/com/cangngo/dao/impl/SanphamDAO.java=UTF-8
 encoding//src/main/webapp/views/web/account/dangky.jsp=UTF-8
 encoding//src/main/webapp/views/web/account/dangnhap.jsp=UTF-8
 encoding//src/main/webapp/views/web/account/doimatkhau.jsp=UTF-8

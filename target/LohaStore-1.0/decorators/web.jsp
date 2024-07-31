@@ -44,6 +44,7 @@
 		data-crossorigin="anonymous"></script>
 	<script type="text/javascript"
 		src="<c:url value='/template/web/js/angular.min.js'/>"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="<c:url value= '/template/web/js/angular-route.min.js' />"></script>
 	<script src="<c:url value= '/template/web/js/app.js'/>"></script>
 	<script src="<c:url value= '/template/web/js/sanpham.json'/>"></script>

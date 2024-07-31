@@ -1,68 +1,146 @@
+function changeQuantity(productId, change, price) {
+  const quantityInput = document.getElementById("quantity-" + productId);
+  const totalPrice = document.getElementById("total-price");
+
+  let quantity = parseInt(quantityInput.value);
+  quantity += change;
+
+  // Đảm bảo số lượng không âm
+  if (quantity < 0) quantity = 0;
+  totalPrice.innerHTML = price * quantity;
+  quantityInput.value = quantity;
+  const url = "http://localhost:9090/LohaStore/gio-hang";
+  const projectName = url.split("/")[3];
+  const uri = "/" + projectName + "/update-quantity";
+  // Sử dụng jQuery để gửi yêu cầu AJAX
+  $.ajax({
+    url: uri,
+    type: "POST",
+    data: { productId: productId, quantity: quantity },
+    success: function (response) {
+      console.log("Cập nhật thành công:", response);
+      // Cập nhật giao diện người dùng ở đây
+      // Ví dụ: Hiển thị thông báo, cập nhật tổng tiền
+      $("#cart-total").text("Tổng tiền: " + response.total);
+    },
+    error: function (xhr, status, error) {
+      console.error("Lỗi khi cập nhật:", status);
+    },
+  });
+}
+
+function addToCart(productId, price) {
+  const cartNumber = document.getElementById("cart-number");
+  let cart_number = parseInt(cartNumber.value);
+  cart_number += 1;
+  cartNumber.value = cart_number;
+  //request
+  const url = window.location.href;
+  const projectName = url.split("/")[3];
+  const uri = "/" + projectName + "/them-moi-chi-tiet-giohang";
+  // Sử dụng jQuery để gửi yêu cầu AJAX
+  $.ajax({
+    url: uri,
+    type: "POST",
+    data: { productId: productId, priceProduct: price },
+    success: function (response) {
+      console.log("Thêm vào thành công:", response);
+      // Cập nhật giao diện người dùng ở đây
+      // Ví dụ: Hiển thị thông báo, cập nhật tổng tiền
+      $("#cart-total").text("Tổng tiền: " + response.total);
+    },
+    error: function (xhr, status, error) {
+      console.error("Lỗi khi thêm mới:", error);
+    },
+  });
+}
+
+function removeCart(idChitietgiohang) {
+  //request
+  const url = window.location.href;
+  const projectName = url.split("/")[3];
+  const uri = "/" + projectName + "/xoa-chi-tiet-san-pham";
+  // Sử dụng jQuery để gửi yêu cầu AJAX
+  $.ajax({
+    url: uri,
+    type: "POST",
+    data: { idChitietgiohang: idChitietgiohang },
+    success: function (response) {
+      console.log("Xóa vào thành công:", response);
+      // Cập nhật giao diện người dùng ở đây
+      // Ví dụ: Hiển thị thông báo, cập nhật tổng tiền
+      $("#cart-total").text("Tổng tiền: " + response.total);
+    },
+    error: function (xhr, status, error) {
+      console.error("Xóa khi thêm mới:", error);
+    },
+  });
+}
 var app = angular.module("myapp", ["ngRoute"]);
 /*app.config(function ($routeProvider) {
   $routeProvider
-    .when("/trang-chu", {
-      templateUrl: "/views/web/home.jsp ?" + Math.random(),
-      controller: "homeCtrl",
-    })
-    .when("/hoalen", {
-      templateUrl: "/views/web/hoalen.jsp ?" + Math.random(),
-      controller: "hoalenCtrl",
-    })
-    .when("/mockhoa", {
-      templateUrl: "/views/web/mockhoa.jsp ?" + Math.random(),
-      controller: "mockhoaCtrl",
-    })
-    .when("/lienhe", {
-      templateUrl: "/views/web/lienhe.jsp ?" + Math.random(),
-      controller: "lienheCtrl",
-    })
-    .when("/dangnhap", {
-      templateUrl: "/views/web/account/dangnhap.jsp ?" + Math.random(),
-      controller: "dangnhapCtrl",
-    })
-    .when("/dangky", {
-      templateUrl: "/views/web/account/dangky.jsp ?" + Math.random(),
-      controller: "dangkyCtrl",
-    })
-    .when("/doimatkhau", {
-      templateUrl: "/views/web/account/doimatkhau.jsp ?" + Math.random(),
-      controller: "doimatkhauCtrl",
-    })
-    .when("/layma", {
-      templateUrl: "/views/web/account/layma.jsp ?" + Math.random(),
-      controller: "laymaCtrl",
-    })
-    .when("/giohang", {
-      templateUrl: "/views/web/giohang.jsp ?" + Math.random(),
-      controller: "giohangCtrl",
-    })
-    .when("/trang-chu/chitietsanpham/:id", {
-      templateUrl: "/views/web/chitietsanpham.jsp ?" + Math.random(),
-      controller: "chitietsanphamCtrl",
-    })
-    .when("/thanhtoan", {
-      templateUrl: "/views/web/thanhtoan.jsp ?" + Math.random(),
-      controller: "thanhtoanCtrl",
-    })
-    .when("/success", {
-      templateUrl: "/views/web/success.jsp ?" + Math.random(),
-      controller: "successCtrl",
-    })
-    .otherwise({
-      templateUrl: "/views/web/home.jsp ?" + Math.random(),
-    });
+	.when("/trang-chu", {
+	  templateUrl: "/views/web/home.jsp ?" + Math.random(),
+	  controller: "homeCtrl",
+	})
+	.when("/hoalen", {
+	  templateUrl: "/views/web/hoalen.jsp ?" + Math.random(),
+	  controller: "hoalenCtrl",
+	})
+	.when("/mockhoa", {
+	  templateUrl: "/views/web/mockhoa.jsp ?" + Math.random(),
+	  controller: "mockhoaCtrl",
+	})
+	.when("/lienhe", {
+	  templateUrl: "/views/web/lienhe.jsp ?" + Math.random(),
+	  controller: "lienheCtrl",
+	})
+	.when("/dangnhap", {
+	  templateUrl: "/views/web/account/dangnhap.jsp ?" + Math.random(),
+	  controller: "dangnhapCtrl",
+	})
+	.when("/dangky", {
+	  templateUrl: "/views/web/account/dangky.jsp ?" + Math.random(),
+	  controller: "dangkyCtrl",
+	})
+	.when("/doimatkhau", {
+	  templateUrl: "/views/web/account/doimatkhau.jsp ?" + Math.random(),
+	  controller: "doimatkhauCtrl",
+	})
+	.when("/layma", {
+	  templateUrl: "/views/web/account/layma.jsp ?" + Math.random(),
+	  controller: "laymaCtrl",
+	})
+	.when("/giohang", {
+	  templateUrl: "/views/web/giohang.jsp ?" + Math.random(),
+	  controller: "giohangCtrl",
+	})
+	.when("/trang-chu/chitietsanpham/:id", {
+	  templateUrl: "/views/web/chitietsanpham.jsp ?" + Math.random(),
+	  controller: "chitietsanphamCtrl",
+	})
+	.when("/thanhtoan", {
+	  templateUrl: "/views/web/thanhtoan.jsp ?" + Math.random(),
+	  controller: "thanhtoanCtrl",
+	})
+	.when("/success", {
+	  templateUrl: "/views/web/success.jsp ?" + Math.random(),
+	  controller: "successCtrl",
+	})
+	.otherwise({
+	  templateUrl: "/views/web/home.jsp ?" + Math.random(),
+	});
 });
 app.run(function ($rootScope) {
   $rootScope.$on("$routeChangeStart", function () {
-    $rootScope.loading = true;
+	$rootScope.loading = true;
   });
   $rootScope.$on("$routeChangeSuccess", function () {
-    $rootScope.loading = false;
+	$rootScope.loading = false;
   });
   $rootScope.$on("$routeChangeError", function () {
-    $rootScope.loading = false;
-    alert("Lỗi không tải được trang");
+	$rootScope.loading = false;
+	alert("Lỗi không tải được trang");
   });
 });*/
 app.service("sharedService", function () {

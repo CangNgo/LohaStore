@@ -1,58 +1,78 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="/common/taglib.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<title><dec:title default="Trang chủ" /></title>
-	<link rel="stylesheet" href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
-    <link rel="stylesheet" href="<c:url value='/template/admin/font-awesome/4.5.0/css/font-awesome.min.css' />" />
-    <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/ace.min.css' />" class="ace-main-stylesheet" id="main-ace-style" />
-    <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type='text/javascript' src='<c:url value="/template/admin/js/jquery-2.2.3.min.js" />'></script>
-    <script src="<c:url value='/template/admin/assets/js/jquery.2.1.1.min.js' />"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="<c:url value='/template/paging/jquery.twbsPagination.js' />"></script>
-    
-    <script src="<c:url value='/ckeditor/ckeditor.js' />"></script>
+<title><dec:title default="Trang chủ" /></title>
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+<meta name="viewport" content="width=device-width" />
+
+
+<!-- Bootstrap core CSS     -->
+<link href="<c:url value ='/template/admin/assets/css/bootstrap.min.css'/>" rel="stylesheet" />
+
+<!-- Animation library for notifications   -->
+<link href="<c:url value ='/template/admin/assets/css/animate.min.css' />" rel="stylesheet" />
+
+<!--  Light Bootstrap Table core CSS    -->
+<link href="<c:url value ='/template/admin/assets/css/light-bootstrap-dashboard.css?v=1.4.0' />"
+	rel="stylesheet" />
+
+
+<!--  CSS for Demo Purpose, don't include it in your project     -->
+<link href="<c:url value ='/template/admin/assets/css/demo.css' />" rel="stylesheet" />
+
+
+<!--     Fonts and icons     -->
+<link
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href="<c:url value ='/template/admin/assets/css/pe-icon-7-stroke.css' />" rel="stylesheet" />
+
 </head>
-<body class="no-skin">
-	<!-- header -->
-    <%@ include file="/common/admin/header.jsp" %>
-    <!-- header -->
-	
-	<div class="main-container" id="main-container">
-		<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-		</script>
-		<dec:body/>
-		
-		<!-- footer -->
-    	<%@ include file="/common/admin/footer.jsp" %>
-    	<!-- footer -->
-    	
-    	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse display">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-		</a>
+<body >
+
+	<div class="wrapper">
+
+		<!-- header -->
+		<%@ include file="/common/admin/sidebar.jsp"%>
+		<!-- header -->
+
+		<div class="main-panel">
+			<%@ include file="/common/admin/header.jsp"%>
+			<div class="content">
+				<dec:body />
+			</div>
+			<%@ include file="/common/admin/footer.jsp"%>
+		</div>
 	</div>
-	
-	
-	<script src="<c:url value='/template/admin/assets/js/bootstrap.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery-ui.custom.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery.ui.touch-punch.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery.easypiechart.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery.sparkline.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery.flot.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery.flot.pie.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/jquery.flot.resize.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/ace-elements.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/ace.min.js' />"></script>
-	<script src="<c:url value='/template/admin/assets/js/bootstrap.min.js'/>"></script>
-	
-	<!-- page specific plugin scripts -->
-	<script src="<c:url value='/template/admin/assets/js/jquery-ui.min.js'/>"></script>
+	<!--   Core JS Files   -->
+	<script src="<c:url value ='/template/admin/assets/js/jquery.3.2.1.min.js' /> " type="text/javascript"></script>
+	<script src="<c:url value = '/template/admin/assets/js/bootstrap.min.js'/>" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="<c:url value ='/template/admin/assets/js/chartist.min.js'/>"></script>
+
+	<!--  Notifications Plugin    -->
+	<script src="<c:url value ='/template/admin/assets/js/bootstrap-notify.js' />"></script>
+
+	<!--  Google Maps Plugin    -->
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="<c:url value ='/template/admin/assets/js/light-bootstrap-dashboard.js?v=1.4.0' />"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="<c:url value ='/template/admin/assets/js/demo.js' /> "></script>
 </body>
 </html>

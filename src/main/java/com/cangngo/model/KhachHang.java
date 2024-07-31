@@ -1,85 +1,131 @@
 package com.cangngo.model;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-public class KhachHang extends AbstractModel {
-	private int idTaikhoan;
-	private String hoten;
-	private String email;
-	private String soDienThoai;
-	private String diaChi;
-	private Date ngaysinh;
-	private Date ngayDangKy;
+import com.cangngo.utils.JpaUtils;
 
-	public KhachHang(int idTaikhoan, String hoten, String email, String soDienThoai, String diaChi, Date ngaysinh,
-			Date ngayDangKy) {
-		super();
-		this.idTaikhoan = idTaikhoan;
-		this.hoten = hoten;
-		this.email = email;
-		this.soDienThoai = soDienThoai;
-		this.diaChi = diaChi;
-		this.ngaysinh = ngaysinh;
-		this.ngayDangKy = ngayDangKy;
-	}
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
-	public int getIdTaikhoan() {
-		return idTaikhoan;
-	}
+@Entity
+@Table(name = "KhachHang")
+public class KhachHang implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_KhachHang")
+    private int id;
+    @OneToOne
+    @JoinColumn(name = "ID_TAIKHOAN")
+    private Taikhoan idTaikhoan;
+    @Column(name = "HoTen")
+    private String hoten;
+    @Column(name = "Email")
+    private String email;
+    @Column(name = "SoDienThoai")
+    private String soDienThoai;
+    @Column(name = "DiaChi")
+    private String diaChi;
+    @Column(name = "NgaySinh")
+    private Date ngaysinh;
+    @Column(name = "NgayDangKy")
+    private Date ngayDangKy;
 
-	public void setIdTaikhoan(int idTaikhoan) {
-		this.idTaikhoan = idTaikhoan;
-	}
+    public KhachHang(int id, Taikhoan idTaikhoan, String hoten, String email, String soDienThoai, String diaChi, Date ngaysinh,
+                     Date ngayDangKy) {
+        this.id = id;
+        this.idTaikhoan = idTaikhoan;
+        this.hoten = hoten;
+        this.email = email;
+        this.soDienThoai = soDienThoai;
+        this.diaChi = diaChi;
+        this.ngaysinh = ngaysinh;
+        this.ngayDangKy = ngayDangKy;
+    }
 
-	public String getHoten() {
-		return hoten;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setHoten(String hoten) {
-		this.hoten = hoten;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public Taikhoan getIdTaikhoan() {
+        return idTaikhoan;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setIdTaikhoan(Taikhoan idTaikhoan) {
+        this.idTaikhoan = idTaikhoan;
+    }
 
-	public String getSoDienThoai() {
-		return soDienThoai;
-	}
+    public String getHoten() {
+        return hoten;
+    }
 
-	public void setSoDienThoai(String soDienThoai) {
-		this.soDienThoai = soDienThoai;
-	}
+    public void setHoten(String hoten) {
+        this.hoten = hoten;
+    }
 
-	public String getDiaChi() {
-		return diaChi;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setDiaChi(String diaChi) {
-		this.diaChi = diaChi;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public Date getNgaysinh() {
-		return ngaysinh;
-	}
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
 
-	public void setNgaysinh(Date ngaysinh) {
-		this.ngaysinh = ngaysinh;
-	}
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
 
-	public Date getNgayDangKy() {
-		return ngayDangKy;
-	}
+    public String getDiaChi() {
+        return diaChi;
+    }
 
-	public void setNgayDangKy(Date ngayDangKy) {
-		this.ngayDangKy = ngayDangKy;
-	}
-	public KhachHang() {
-		// TODO Auto-generated constructor stub
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
+    public Date getNgaysinh() {
+        return ngaysinh;
+    }
+
+    public void setNgaysinh(Date ngaysinh) {
+        this.ngaysinh = ngaysinh;
+    }
+
+    public Date getNgayDangKy() {
+        return ngayDangKy;
+    }
+
+    public void setNgayDangKy(Date ngayDangKy) {
+        this.ngayDangKy = ngayDangKy;
+    }
+
+    public KhachHang() {
+        // TODO Auto-generated constructor stub
+    }
+
+	public static void main(String[] args) {
+		EntityManager entity = JpaUtils.getEntityManager();
+		List<KhachHang> listKhachHang = entity.createQuery("SELECT k FROM KhachHang k", KhachHang.class)
+				.getResultList();
+		listKhachHang.forEach(c -> {
+			System.out.println(c.getIdTaikhoan().getTaiKhoan());
+		});
 	}
 
 }

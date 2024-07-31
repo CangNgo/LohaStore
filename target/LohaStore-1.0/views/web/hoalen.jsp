@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ include file="/common/taglib.jsp"%>
 <div class="wrapper" ng-controller="hoalenCtrl">
 	<div class="container-fluid">
 		<div class="box-banner-hoalen">
@@ -19,37 +21,23 @@
 	<div class="container list-product-hoalen">
 		<div class="product-hot-list">
 			<div class="row mt-5">
-
 				<div class="row">
 					<div class="col-md-3">
 						<%@include file="/common/web/minimenu.jsp"%>
 					</div>
 					<div class="col-md-9">
 						<div class="row">
-							<div
-								class="col-md-4 col-sm-6 card border-0 rounded-5 product-hot-item mb-3"
-								ng-repeat="item in hoalen | filter: {name: searchTextHoalen.searchName} | limitTo: limit:start">
+							<c:forEach var="item" items="${listProductHoalen }">
 								<div
-									class="box-product-img border border-1 border-bottom-0 rounded-top-5">
-									<img ng-src="/LohaStore/template/web/img/{{item.image}}"
-										class="rounded-5 " alt="">
+									class="col-md-4 col-sm-6 card border-0 rounded-5 product-hot-item mb-3">
+									<jsp:include page="/common/web/item.jsp">
+										<jsp:param name="id" value="${item.id}" />
+										<jsp:param name="name" value="${item.tenSanpham}" />
+										<jsp:param name="price" value="${item.gia}" />
+										<jsp:param name="image" value="${item.hinh}" />
+									</jsp:include>
 								</div>
-								<div
-									class="box-product-text border border-1 rounded-bottom-5 border-top-0 card-body d-flex flex-column">
-									<p
-										class="card-title text-center fs-5 fw-bold mb-0 c-item-title">
-										<a href="#!/chitietsanpham/{{item.id}}"
-											class="text-decoration-none text-reset">{{item.name}}</a>
-									</p>
-									<p class="text-center fs-5 m-0 product-price fw-bold">
-										{{item.price | currency: '' : 0}}<span class="unit">/cây</span>
-									</p>
-									<button class="btn c-btn-pay rounded-4 fw-medium">
-										Mua ngay<i class="fa-solid fa-cart-shopping"
-											ng-click="addToCart(item)"></i>
-									</button>
-								</div>
-							</div>
+							</c:forEach>
 						</div>
 					</div>
 				</div>

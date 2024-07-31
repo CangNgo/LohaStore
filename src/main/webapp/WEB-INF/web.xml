@@ -22,4 +22,29 @@
     <servlet-name>Giohang</servlet-name>
     <url-pattern>/Giohang</url-pattern>
   </servlet-mapping>
+  <session-config>
+    <tracking-mode>COOKIE</tracking-mode>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>ExportProduct</display-name>
+    <servlet-name>ExportProduct</servlet-name>
+    <servlet-class>com.cangngo.controller.web.ExportProduct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExportProduct</servlet-name>
+    <url-pattern>/ExportProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Chitietsanpham</display-name>
+    <servlet-name>Chitietsanpham</servlet-name>
+    <servlet-class>com.cangngo.controller.web.Chitietsanpham</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Chitietsanpham</servlet-name>
+    <url-pattern>/Chitietsanpham</url-pattern>
+  </servlet-mapping>
+  
+
 </web-app>

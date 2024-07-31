@@ -1,6 +1,11 @@
 package com.cangngo.controller.web;
 
 import java.io.IOException;
+import java.util.List;
+
+import com.cangngo.model.SanPham;
+import com.cangngo.service.ISanphamService;
+import com.cangngo.service.impl.SanphamService;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,7 +19,14 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet({ "/hoa-len" })
 public class Hoalen extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private ISanphamService sanphamService;
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		sanphamService = new SanphamService();
+	}
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -28,7 +40,10 @@ public class Hoalen extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		String category = request.getParameter("category");
+		List<SanPham> listHoalen = sanphamService.findByCategoryByProduct(category);
+		System.out.println(listHoalen.get(0).getTenSanpham());
+		request.setAttribute("listProductHoalen", listHoalen);
 		request.getRequestDispatcher("/views/web/hoalen.jsp").forward(request, response);
 	}
 

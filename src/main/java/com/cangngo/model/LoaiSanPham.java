@@ -1,7 +1,25 @@
 package com.cangngo.model;
 
-public class LoaiSanPham extends AbstractModel {
+import java.io.Serializable;
+import java.util.List;
+
+import com.cangngo.utils.JpaUtils;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "LoaiSanPham")
+public class LoaiSanPham implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_LoaiSanPham")
+	private int idLoaiSanPham;
+	@Column(name = "TenLoai")
 	private String tenLoai;
+	@Column(name = "MoTa")
 	private String moTa;
 
 	public LoaiSanPham(String tenLoai, String moTa) {
@@ -27,6 +45,12 @@ public class LoaiSanPham extends AbstractModel {
 	}
 	public LoaiSanPham() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		EntityManager entity = JpaUtils.getEntityManager();
+		List<LoaiSanPham> listTK = entity.createQuery("select t from LoaiSanPham t",LoaiSanPham.class).getResultList();
+		System.out.println(listTK.get(1).getTenLoai());
 	}
 
 }

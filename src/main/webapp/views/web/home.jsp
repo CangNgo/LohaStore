@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="/views/web/Slider.jsp"%>
 <div id="content">
-	<div class="top_product-pay " >
+	<div class="top_product-pay ">
 		<div class="container">
 			<div class="row top_product-pay-text c-product-title c-product-line">
 				<div
@@ -10,7 +13,7 @@
 					<hr class="m-3 w-75 mt-5 ">
 				</div>
 				<div class="col-md-4 col-sm-4">
-					<p class="h2 text-uppercase text-center fw-bolder mt-4 mb-4">${hello }sản
+					<p class="h2 text-uppercase text-center fw-bolder mt-4 mb-4">sản
 						phẩm bán chạy</p>
 				</div>
 				<div
@@ -103,17 +106,18 @@
 			</div>
 			<div class="product-hot-list">
 				<div class="row mt-5">
-					<div
-						class="col-md-3 col-sm-6 card border-0 rounded-5 product-hot-item mb-3"
-						data-ng-repeat="item in totalSP | filter: {name: searchText.searchName} | limitTo: limit:start">
-						<jsp:include page="/common/web/item.jsp">
-							<jsp:param name="id" value="${item.id}" />
-							<jsp:param name="name" value="${item.name}" />
-							<jsp:param name="price" value="${item.price}" />
-							<jsp:param name="image"
-								value="/LohaStore/template/web/img/${item.image}" />
-						</jsp:include>
-					</div>
+					<c:forEach var="item" items="${listSanPham }">
+						<div
+							class="col-md-3 col-sm-6 card border-0 rounded-5 product-hot-item mb-3">
+							<jsp:include page="/common/web/item.jsp">
+								<jsp:param name="id" value="${item.id}" />
+								<jsp:param name="name" value="${item.tenSanpham}" />
+								<jsp:param name="price" value="${item.gia}" />
+								<jsp:param name="image"
+									value="${item.hinh}" />
+							</jsp:include>
+						</div>
+					</c:forEach>
 				</div>
 			</div>
 		</div>
