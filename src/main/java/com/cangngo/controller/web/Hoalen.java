@@ -42,7 +42,6 @@ public class Hoalen extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String category = request.getParameter("category");
 		List<SanPham> listHoalen = sanphamService.findByCategoryByProduct(category);
-		System.out.println(listHoalen.get(0).getTenSanpham());
 		request.setAttribute("listProductHoalen", listHoalen);
 		request.getRequestDispatcher("/views/web/hoalen.jsp").forward(request, response);
 	}

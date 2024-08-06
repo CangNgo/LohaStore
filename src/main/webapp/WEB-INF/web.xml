@@ -6,10 +6,18 @@
   </welcome-file-list>
   <filter>
     <filter-name>sitemesh</filter-name>
-    <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+    <filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>sitemesh</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>servletFilter</filter-name>
+    <filter-class>com.cangngo.fillter.AuthenrizationFillter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>servletFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <servlet>
@@ -45,6 +53,14 @@
     <servlet-name>Chitietsanpham</servlet-name>
     <url-pattern>/Chitietsanpham</url-pattern>
   </servlet-mapping>
-  
-
+  <servlet>
+    <description></description>
+    <display-name>Thanhtoan</display-name>
+    <servlet-name>Thanhtoan</servlet-name>
+    <servlet-class>com.cangngo.controller.web.Thanhtoan</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Thanhtoan</servlet-name>
+    <url-pattern>/Thanhtoan</url-pattern>
+  </servlet-mapping>
 </web-app>

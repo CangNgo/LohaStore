@@ -34,11 +34,12 @@ public class SanphamDAO implements ISanphamDAO {
 		List<SanPham> listProductByCategory = null;
 		try (EntityManager sanpham = JpaUtils.getEntityManager()) {
 			TypedQuery<SanPham> query = sanpham.createQuery(
-					"SELECT product FROM SanPham product JOIN product.idLoaiSanPham loaiSanPham WHERE loaiSanPham.tenLoai = :tenLoai",
+					"SELECT product FROM SanPham product JOIN product.idLoaiSanpham loaiSanPham WHERE loaiSanPham.tenloai =:tenLoai",
 					SanPham.class);
 			query.setParameter("tenLoai", tenLoai);
 			listProductByCategory = query.getResultList();
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			e.getStackTrace();
 			// TODO: handle exception
 		}

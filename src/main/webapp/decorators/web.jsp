@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/common/taglib.jsp"%>
+<%@ include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,14 +26,20 @@
 	href="<c:url value= '/template/web/css/dangnhap.css'/>">
 </head>
 <body data-ng-app="myapp" data-ng-controller="myCtrl">
+	<!-- header -->
 	<%@include file="/common/web/header.jsp"%>
 	<div id="maincontent"></div>
+	
+	<!-- content -->
 	<div class="container">
 		<dec:body />
 	</div>
- 
+ 	<!-- end content -->
+ 	
+ 	<!-- footer -->
 	<%@include file="/common/web/footer.jsp"%>
-
+	<!-- end footer -->
+	<!-- script file -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		data-integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

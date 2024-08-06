@@ -5,10 +5,12 @@ import java.util.List;
 
 import com.cangngo.model.CartItem;
 import com.cangngo.model.SanPham;
+import com.cangngo.model.UserModel;
 import com.cangngo.service.IGiohangService;
 import com.cangngo.service.ISanphamService;
 import com.cangngo.service.impl.GiohangService;
 import com.cangngo.service.impl.SanphamService;
+import com.cangngo.utils.SessionUtil;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -47,16 +49,21 @@ public class Home extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<SanPham> listSanPham = sanphamService.findAll();
+		request.getSession().setAttribute("listSanPham", listSanPham);
 		HttpSession session = request.getSession();
 		String cartNumber = (String) session.getAttribute("cartNumber");
-		if (cartNumber == null) {
-			List<CartItem> listCart = giohangService.findAllByIdUser(2);
-			String totalItemInCart = String.valueOf(listCart.size());
-			session.setAttribute("cartNumber", totalItemInCart);
-		}else {
-			session.setAttribute("cartNumber", cartNumber);
+		UserModel usermodel = (UserModel) SessionUtil.getInstance().getValue(request, "userModel");
+		if (usermodel != null) {
+			if (cartNumber == null) {
+				int idGiohang = usermodel.getIdGiohang();
+				List<CartItem> listCart = giohangService.findAllByIdUser(idGiohang);
+				String totalItemInCart = String.valueOf(listCart.size());
+				session.setAttribute("cartNumber", totalItemInCart);
+			} else {
+				session.setAttribute("cartNumber", cartNumber);
+			}
+
 		}
-		request.getSession().setAttribute("listSanPham", listSanPham);
 		RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
 		rd.forward(request, response);
 	}

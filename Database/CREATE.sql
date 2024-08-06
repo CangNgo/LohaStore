@@ -223,3 +223,54 @@ INSERT INTO ChiTietGioHang (ID_GioHang, ID_SanPham, SoLuong, GiaTaiThoiDiemThem)
 VALUES
     (@GioHangID, 1, 2, (SELECT Gia FROM SanPham WHERE ID_SanPham = 1)),
     (@GioHangID, 3, 1, (SELECT Gia FROM SanPham WHERE ID_SanPham = 3));
+
+
+	
+EXEC SP_InsertUser	'ngotancanghẻthesdfrr', 'cangngoooodfo12', 'cang123123', 'Ngô Tấn Cang'
+GO
+CREATE OR ALTER PROC SP_InsertUser 
+    @tenDangnhap VARCHAR(100), 
+    @email VARCHAR(100), 
+    @matkhau VARCHAR(100),
+    @hoten NVARCHAR(100)
+AS 
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION
+
+        -- Chèn vào bảng TAIKHOAN
+        INSERT INTO TAIKHOAN(TAIKHOAN, MATKHAU, VAITRO)
+        VALUES (@tenDangnhap, @matkhau, 0)  -- 0 thay cho 'user' nếu VAITRO là BIT
+
+        -- Lấy ID của TAIKHOAN vừa chèn
+        DECLARE @idTaiKhoan INT = SCOPE_IDENTITY();
+
+        -- Chèn vào bảng KhachHang
+        INSERT INTO KhachHang(ID_TAIKHOAN, HoTen, Email)
+        VALUES (@idTaiKhoan, @hoten, @email)
+
+        -- Lấy ID của KhachHang vừa chèn
+        DECLARE @idKhachhang INT = SCOPE_IDENTITY();
+
+        -- Chèn vào bảng GioHang
+        INSERT INTO GioHang(ID_KhachHang, NgayTao)
+        VALUES (@idKhachhang, GETDATE())
+
+        -- Nếu mọi thứ đều thành công, commit transaction
+        COMMIT TRANSACTION
+    END TRY
+    BEGIN CATCH
+        -- Nếu có lỗi, rollback transaction
+        ROLLBACK TRANSACTION
+      
+    END CATCH
+END
+
+SELECT * FROM KHACHHANG WHERE Hoten = N'Ngô Tấn Cang'
+go 
+
+select *from taikhoan
+
+select * from SanPham join LoaiSanPham on SanPham.ID_LoaiSanPham = LoaiSanPham.ID_LoaiSanPham where LoaiSanPham.TenLoai = 'hoalen'
+ 
+select count(taikhoan) from taikhoan where taikhoan = 'cangadmin'

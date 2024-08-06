@@ -1,8 +1,14 @@
 package com.cangngo.dao;
 
-import com.cangngo.model.Taikhoan;
+import com.cangngo.model.UserModel;
 
 public interface ITaikhoanDAO {
-	Taikhoan findUserByUsername(String username, String password);
+	UserModel findUserByUsername(String username, String password);
+
+	boolean InsertNewAccount(String name, String email, String username, String password);
+
+	boolean findEmaiAlreadyExists(String email);
+
+	boolean findUsernameAlreadyExists(String usename);
 
 }

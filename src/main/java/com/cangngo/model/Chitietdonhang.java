@@ -4,11 +4,25 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.cangngo.utils.JpaUtils;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "ChiTietDonHang")
 public class Chitietdonhang implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_ChiTietDonHang")
@@ -75,6 +89,14 @@ public class Chitietdonhang implements Serializable {
 		EntityManager entity = JpaUtils.getEntityManager();
 		List<Chitietdonhang> listTK = entity.createQuery("select t from Chitietdonhang t",Chitietdonhang.class).getResultList();
 		System.out.println(listTK.get(1).getSoluong());
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

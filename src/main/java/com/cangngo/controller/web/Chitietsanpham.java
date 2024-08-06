@@ -41,7 +41,7 @@ public class Chitietsanpham extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String idStr = request.getParameter("id");
+		String idStr = request.getParameter("idProduct");
 		try {
 			int id = Integer.parseInt(idStr);
 			SanPham product = sanphamService.findByIdProduct(id);

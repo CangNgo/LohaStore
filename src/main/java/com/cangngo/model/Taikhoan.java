@@ -4,8 +4,24 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.cangngo.utils.JpaUtils;
-import jakarta.persistence.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.NamedStoredProcedureQueries;
+import jakarta.persistence.NamedStoredProcedureQuery;
+import jakarta.persistence.StoredProcedureParameter;
+import jakarta.persistence.Table;
+
+@NamedStoredProcedureQueries({
+		@NamedStoredProcedureQuery(name = "SP_InsertUser", procedureName = "SP_InsertUser", parameters = {
+				@StoredProcedureParameter(name = "tenDangnhap", type = String.class),
+				@StoredProcedureParameter(name = "email", type = String.class),
+				@StoredProcedureParameter(name = "matkhau", type = String.class),
+				@StoredProcedureParameter(name = "hoten", type = String.class) }) })
 
 @Table(name = "TAIKHOAN")
 @Entity
@@ -71,10 +87,8 @@ public class Taikhoan implements Serializable {
 
 	public static void main(String[] args) {
 		EntityManager entity = JpaUtils.getEntityManager();
-		List<Taikhoan> listTK = entity.createQuery("select t from Taikhoan t",Taikhoan.class).getResultList();
+		List<Taikhoan> listTK = entity.createQuery("select t from Taikhoan t", Taikhoan.class).getResultList();
 		System.out.println(listTK.get(1).getId());
 	}
-
-
 
 }

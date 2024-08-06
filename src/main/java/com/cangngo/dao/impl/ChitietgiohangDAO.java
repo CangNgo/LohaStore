@@ -58,7 +58,6 @@ public class ChitietgiohangDAO implements IChitietgiohangDAO {
 				if (giohang != null) {
 					if (ctgiohanginDB.size() == 0) {
 						Chitietgiohang ctgiohang = new Chitietgiohang();
-						ctgiohang.setGiaTaiThoiDiemThem(sanpham.getGia());
 						ctgiohang.setIdGiohang(giohang);
 						ctgiohang.setIdSanpham(sanpham);
 						ctgiohang.setSoluong(1);
@@ -69,7 +68,7 @@ public class ChitietgiohangDAO implements IChitietgiohangDAO {
 						
 						
 					} else {
-						Chitietgiohang ctgiohangUpdateQuantity = ctgiohanginDB.getFirst();
+						Chitietgiohang ctgiohangUpdateQuantity = ctgiohanginDB.get(0);
 						updateQuantityById(ctgiohangUpdateQuantity.getId(), ctgiohangUpdateQuantity.getSoluong() + 1);
 					}
 				}

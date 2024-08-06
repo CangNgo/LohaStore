@@ -43,7 +43,6 @@ public class Mockhoa extends HttpServlet {
 		String category = request.getParameter("category");
 //		System.out.println(category);
 		List<SanPham> listProductMockhoa = sanphamService.findByCategoryByProduct(category);
-		System.out.println(listProductMockhoa.get(0).getTenSanpham());
 		request.setAttribute("listProductMockhoa", listProductMockhoa);
 		request.getRequestDispatcher("/views/web/mockhoa.jsp").forward(request, response);
 	}

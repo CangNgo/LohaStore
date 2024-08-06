@@ -6,7 +6,14 @@ import java.util.Date;
 import java.util.List;
 
 import com.cangngo.utils.JpaUtils;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "DonHang")
@@ -23,25 +30,26 @@ public class Donhang implements Serializable {
     @Column(name = "ID_KhachHang")
     private int idKhachhang;
     @Column(name = "NgayDatHang")
-    private Date ngayDatHang;
+	private Date ngayDathang;
     @Column(name = "TongTien")
     private double tongTien;
     @Column(name = "TrangThaiDonHang")
-    private String trangThaiDonHang;
+	private String trangthaiDonhang;
 	@Column(name = "DiaChiGiaoHang")
-    private String diaChiGiaoHang;
+    private String diachiGiaohang;
 	@Column(name = "PhuongThucThanhToan")
     private String phuongThucThanhToan;
 
-    public Donhang(int id, int idKhachhang, Date ngayDatHang, double tongTien, String trangThaiDonHang, String diaChiGiaoHang,
+	public Donhang(int id, int idKhachhang, Date ngayDatHang, double tongTien, String trangthaiDonhang,
+			String diachiGiaohang,
                    String phuongThucThanhToan) {
         super();
         this.id = id;
         this.idKhachhang = idKhachhang;
-        this.ngayDatHang = ngayDatHang;
+		this.trangthaiDonhang = trangthaiDonhang;
         this.tongTien = tongTien;
-        this.trangThaiDonHang = trangThaiDonHang;
-        this.diaChiGiaoHang = diaChiGiaoHang;
+		this.trangthaiDonhang = trangthaiDonhang;
+        this.diachiGiaohang = diachiGiaohang;
         this.phuongThucThanhToan = phuongThucThanhToan;
     }
 
@@ -54,11 +62,11 @@ public class Donhang implements Serializable {
     }
 
     public Date getNgayDatHang() {
-        return ngayDatHang;
+		return ngayDathang;
     }
 
-    public void setNgayDatHang(Date ngayDatHang) {
-        this.ngayDatHang = ngayDatHang;
+	public void setNgayDatHang(Date ngayDathang) {
+		this.ngayDathang = ngayDathang;
     }
 
     public double getTongTien() {
@@ -70,19 +78,19 @@ public class Donhang implements Serializable {
     }
 
     public String getTrangThaiDonHang() {
-        return trangThaiDonHang;
+		return trangthaiDonhang;
     }
 
     public void setTrangThaiDonHang(String trangThaiDonHang) {
-        this.trangThaiDonHang = trangThaiDonHang;
+		this.trangthaiDonhang = trangThaiDonHang;
     }
 
     public String getDiaChiGiaoHang() {
-        return diaChiGiaoHang;
+		return diachiGiaohang;
     }
 
     public void setDiaChiGiaoHang(String diaChiGiaoHang) {
-        this.diaChiGiaoHang = diaChiGiaoHang;
+		this.diachiGiaohang = diaChiGiaoHang;
     }
 
     public String getPhuongThucThanhToan() {

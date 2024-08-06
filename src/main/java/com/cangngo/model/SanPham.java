@@ -4,7 +4,16 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.cangngo.utils.JpaUtils;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "SanPham")
@@ -18,7 +27,7 @@ public class SanPham implements Serializable {
 
 	@ManyToOne()
 	@JoinColumn(name = "ID_LoaiSanPham")
-	private LoaiSanPham idLoaiSanPham;
+	private LoaiSanPham idLoaiSanpham;
 
 	@Column(name = "TenSanPham")
 	private String tenSanpham;
@@ -50,11 +59,11 @@ public class SanPham implements Serializable {
 	}
 
 	public LoaiSanPham getIdLoaiSanPham() {
-		return idLoaiSanPham;
+		return idLoaiSanpham;
 	}
 
-	public void setIdLoaiSanPham(LoaiSanPham idLoaiSanPham) {
-		this.idLoaiSanPham = idLoaiSanPham;
+	public void setIdLoaiSanPham(LoaiSanPham idLoaiSanpham) {
+		this.idLoaiSanpham = idLoaiSanpham;
 	}
 
 	public String getTenSanpham() {

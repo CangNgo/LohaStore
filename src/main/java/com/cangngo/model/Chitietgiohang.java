@@ -39,17 +39,6 @@ public class Chitietgiohang implements Serializable {
 	private SanPham idSanpham;
 	@Column(name = "SoLuong")
 	private int soluong;
-	@Column(name = "GiaTaiThoiDiemThem")
-	private double giaTaiThoiDiemThem;
-
-	public Chitietgiohang(int id, Giohang idGiohang, SanPham idSanpham, int soluong, double giaTaiThoiDiemThem) {
-		super();
-		this.id = id;
-		this.idGiohang = idGiohang;
-		this.idSanpham = idSanpham;
-		this.soluong = soluong;
-		this.giaTaiThoiDiemThem = giaTaiThoiDiemThem;
-	}
 
 	public Chitietgiohang(int id, Giohang idGiohang, SanPham idSanpham, int soluong) {
 		super();
@@ -58,6 +47,7 @@ public class Chitietgiohang implements Serializable {
 		this.idSanpham = idSanpham;
 		this.soluong = soluong;
 	}
+
 
 	public int getId() {
 		return id;
@@ -91,13 +81,6 @@ public class Chitietgiohang implements Serializable {
 		this.soluong = soluong;
 	}
 
-	public double getGiaTaiThoiDiemThem() {
-		return giaTaiThoiDiemThem;
-	}
-
-	public void setGiaTaiThoiDiemThem(double giaTaiThoiDiemThem) {
-		this.giaTaiThoiDiemThem = giaTaiThoiDiemThem;
-	}
 
 	public Chitietgiohang() {
 		// TODO Auto-generated constructor stub

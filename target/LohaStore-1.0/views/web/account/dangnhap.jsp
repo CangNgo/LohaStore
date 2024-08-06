@@ -9,15 +9,15 @@
 	<div class="container from-login">
 		<div class="row d-flex justify-content-center c-from-login">
 			<div class="col-md-4 col-sm-8 wrapper rounded-3">
-				<form action="account/dang-nhap" name="login"
-					class="needs-validation" novalidate>
+				<form action=" <c:url value ="/account/dang-nhap?action=login" />" method="post"
+					name="login" class="needs-validation" novalidate>
 					<h2 class="titleLogin text-center mb-5 fw-bold">Đăng nhập</h2>
 					<div class="box_username box_input mb-4 text-white">
 						<label for="username" class="label-from "><i
 							class="fa fa-user icon icon_username "></i> Username</label> <input
 							type="text" name="username" id="username"
 							class="form-control Username box_input_input {{login.username.$touched && login.username.$invalid?'box-input-input-invalid':''}} border-0 border border-bottom border-2 rounded-0 text-white"
-							required minlength="8" ng-model="username"> <span
+							  ng-model="username"> <span
 							ng-show="login.username.$touched && login.username.$invalid"
 							class="text-warning position-absolute"> Vui lòng nhập tên
 							đăng nhập </span>
@@ -28,7 +28,7 @@
 								class="fa-solid fa-lock"></i> Password</label> <input type="password"
 								name="password" id="password"
 								class="form-control password box_input_input {{login.password.$touched && login.password.$invalid?'box-input-input-invalid':''}} border-0 border border-bottom border-2 rounded-0 text-white"
-								required minlength="8" ng-model="password"> <span
+								  ng-model="password"> <span
 								ng-show="login.password.$touched && login.password.$invalid"
 								class="text-warning position-absolute"> Vui lòng nhập mật
 								khẩu </span>
@@ -37,7 +37,7 @@
 					<div class="box_remember box_input mb-4 text-white">
 						<div
 							class="box_remember_label box_input_title d-flex justify-content-between">
-							<a href="dang-ky" class="text-decoration-none text-white">Đăng
+							<a href="dang-ky?action=sign-up " class="text-decoration-none text-white">Đăng
 								ký</a>
 							<div class="box_remember_right">
 								<a href="doi-mat-khau"
@@ -46,13 +46,15 @@
 							</div>
 						</div>
 					</div>
-					
+					<c:if test="${not empty message }">
+						<div class="alert alert-${alert }">${message }</div>
+					</c:if>
+				
 					<input type="hidden" value="login" name="action" />
 					<div class="row  d-flex justify-content-center">
 						<div class="col-md-9">
 							<div class="box_login">
-								<button type="{{login.$valid?'submit':'button'}}"
-									ng-click="checkForm(login.$valid)"
+								<button type="submit"
 									class="btn btn-lg w-100 mb-4 fw-bold">Login</button>
 							</div>
 						</div>

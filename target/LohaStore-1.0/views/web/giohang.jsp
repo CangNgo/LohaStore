@@ -17,10 +17,11 @@
 				</thead>
 				<tbody>
 					<c:forEach items="${cartItem}" var="item">
-						<tr class="product-item">
+						<tr class="product-item" id="product-item-${item.idCTGioHang }">
 							<td>
 								<div class="box-information-product d-flex ms-3">
-									<input type="checkbox" name="choie-product" id="choie-product"
+									<input type="checkbox" name="choie-product"
+										id="choie-product-${item.idCTGioHang }"
 										class="align-self-start">
 									<div class="box-img ms-2 me-2 c-img-cart">
 										<img
@@ -55,10 +56,11 @@
 										value="${item.soLuong}" style="text-align: center;" readonly>
 									<button type="button"
 										class="btn btn-lg border border-black rounded-0 quantity-increment"
-										onclick="changeQuantity(${item.idCTGioHang}, 1, ${item.gia })">+ ${chitietID }</button>
+										onclick="changeQuantity(${item.idCTGioHang}, 1, ${item.gia })">+
+										${chitietID }</button>
 								</div>
 							</td>
-							<td class="fs-5" id="total-price">${item.gia * item.soLuong}</td>
+							<td class="fs-5" id="total-price-${item.idCTGioHang}">${item.gia * item.soLuong}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -74,8 +76,9 @@
 					<div class="row box-btn-pay">
 						<div class="col-md-12 col-sm-12">
 							<div class="btn btn-lg text-uppercase w-100 btn-pay">
-								<a href="#!/thanhtoan" class="text-black text-decoration-none">Thanh
-									toán</a>
+								<a id="checkout-link" href="<c:url value='/thanh-toan'/>"
+									onclick="checkOut(event)"
+									class="text-black text-decoration-none">Thanh toán</a>
 							</div>
 						</div>
 					</div>

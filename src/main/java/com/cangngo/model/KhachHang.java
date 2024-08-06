@@ -15,6 +15,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "KhachHang")
@@ -31,24 +33,26 @@ public class KhachHang implements Serializable {
     @Column(name = "Email")
     private String email;
     @Column(name = "SoDienThoai")
-    private String soDienThoai;
+	private String soDienthoai;
     @Column(name = "DiaChi")
-    private String diaChi;
+	private String diachi;
+	@Temporal(TemporalType.DATE)
     @Column(name = "NgaySinh")
     private Date ngaysinh;
+	@Temporal(TemporalType.DATE)
     @Column(name = "NgayDangKy")
-    private Date ngayDangKy;
+	private Date ngayDangky;
 
-    public KhachHang(int id, Taikhoan idTaikhoan, String hoten, String email, String soDienThoai, String diaChi, Date ngaysinh,
-                     Date ngayDangKy) {
+	public KhachHang(int id, Taikhoan idTaikhoan, String hoten, String email, String soDienthoai, String diachi,
+			Date ngaysinh, Date ngayDangky) {
         this.id = id;
         this.idTaikhoan = idTaikhoan;
         this.hoten = hoten;
         this.email = email;
-        this.soDienThoai = soDienThoai;
-        this.diaChi = diaChi;
+		this.soDienthoai = soDienthoai;
+		this.diachi = diachi;
         this.ngaysinh = ngaysinh;
-        this.ngayDangKy = ngayDangKy;
+		this.ngayDangky = ngayDangky;
     }
 
     public int getId() {
@@ -84,19 +88,19 @@ public class KhachHang implements Serializable {
     }
 
     public String getSoDienThoai() {
-        return soDienThoai;
+		return soDienthoai;
     }
 
-    public void setSoDienThoai(String soDienThoai) {
-        this.soDienThoai = soDienThoai;
+	public void setSoDienThoai(String soDienthoai) {
+		this.soDienthoai = soDienthoai;
     }
 
     public String getDiaChi() {
-        return diaChi;
+		return diachi;
     }
 
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
+	public void setDiaChi(String diachi) {
+		this.diachi = diachi;
     }
 
     public Date getNgaysinh() {
@@ -108,11 +112,11 @@ public class KhachHang implements Serializable {
     }
 
     public Date getNgayDangKy() {
-        return ngayDangKy;
+		return ngayDangky;
     }
 
-    public void setNgayDangKy(Date ngayDangKy) {
-        this.ngayDangKy = ngayDangKy;
+	public void setNgayDangKy(Date ngayDangky) {
+		this.ngayDangky = ngayDangky;
     }
 
     public KhachHang() {
@@ -121,11 +125,10 @@ public class KhachHang implements Serializable {
 
 	public static void main(String[] args) {
 		EntityManager entity = JpaUtils.getEntityManager();
-		List<KhachHang> listKhachHang = entity.createQuery("SELECT k FROM KhachHang k", KhachHang.class)
+		List<Object[]> listKhachHang = entity
+				.createQuery("select t, k, g from KhachHang k join k.idTaikhoan t join g.idKhachhang g", Object[].class)
 				.getResultList();
-		listKhachHang.forEach(c -> {
-			System.out.println(c.getIdTaikhoan().getTaiKhoan());
-		});
+
 	}
 
 }
