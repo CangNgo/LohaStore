@@ -1,4 +1,3 @@
-C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\ProductController.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\ExportProduct.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Home.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\utils\SessionUtil.java
@@ -7,6 +6,7 @@ C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\IChitietdonhan
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\impl\GiohangDAO.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\impl\GiohangService.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Lienhe.java
+C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\UserProfile.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\AbstractModel.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\impl\KhachhangService.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\IKhachhangService.java
@@ -31,10 +31,10 @@ C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\IGiohangSe
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Chitietsanpham.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Thanhtoan.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\impl\SanphamDAO.java
+C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\impl\DonhangService.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\constant\SystemConstant.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Doimatkhau.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\IDonhangDAO.java
-C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\User.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\Chitietdonhang.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\IChitietgiohangService.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\HomeController.java
@@ -43,11 +43,12 @@ C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\impl\Loaisanph
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\ISanphamService.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\utils\JpaUtils.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\impl\TaikhoanDAO.java
-C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\impl\Donhang.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Hoalen.java
+C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\NewLoaiSP.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Giohang.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\IChitietgiohangDAO.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\Giohang.java
+C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\UserController.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\CartItem.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\IGiohangDAO.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\IKhachhangDAO.java
@@ -56,12 +57,13 @@ C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\ILoaisanph
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\Taikhoan.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\OrderController.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\impl\ChitietdonhangDAO.java
+C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\Thongtindathang.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\UserModel.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\ILoaisanphamDAO.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\dao\impl\DonhangDAO.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\IDonhangService.java
+C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\ProductsController.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\web\Mockhoa.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\IChitietdonhangService.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\model\KhachHang.java
-C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\controller\admin\CategoryController.java
 C:\workspace\PS36910_NgoTanCang_ASM\src\main\java\com\cangngo\service\impl\ChitietdonhangService.java

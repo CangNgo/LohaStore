@@ -3,13 +3,9 @@ package com.cangngo.model;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
-
-import com.cangngo.utils.JpaUtils;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EntityManager;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -53,61 +49,67 @@ public class Donhang implements Serializable {
         this.phuongThucThanhToan = phuongThucThanhToan;
     }
 
-    public int getIdKhachhang() {
-        return idKhachhang;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setIdKhachhang(int idKhachhang) {
-        this.idKhachhang = idKhachhang;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public Date getNgayDatHang() {
+	public int getIdKhachhang() {
+		return idKhachhang;
+	}
+
+	public void setIdKhachhang(int idKhachhang) {
+		this.idKhachhang = idKhachhang;
+	}
+
+	public Date getNgayDathang() {
 		return ngayDathang;
-    }
+	}
 
-	public void setNgayDatHang(Date ngayDathang) {
+	public void setNgayDathang(Date ngayDathang) {
 		this.ngayDathang = ngayDathang;
-    }
+	}
 
-    public double getTongTien() {
-        return tongTien;
-    }
+	public double getTongTien() {
+		return tongTien;
+	}
 
-    public void setTongTien(double tongTien) {
-        this.tongTien = tongTien;
-    }
+	public void setTongTien(double tongTien) {
+		this.tongTien = tongTien;
+	}
 
-    public String getTrangThaiDonHang() {
+	public String getTrangthaiDonhang() {
 		return trangthaiDonhang;
-    }
+	}
 
-    public void setTrangThaiDonHang(String trangThaiDonHang) {
-		this.trangthaiDonhang = trangThaiDonHang;
-    }
+	public void setTrangthaiDonhang(String trangthaiDonhang) {
+		this.trangthaiDonhang = trangthaiDonhang;
+	}
 
-    public String getDiaChiGiaoHang() {
+	public String getDiachiGiaohang() {
 		return diachiGiaohang;
-    }
+	}
 
-    public void setDiaChiGiaoHang(String diaChiGiaoHang) {
-		this.diachiGiaohang = diaChiGiaoHang;
-    }
+	public void setDiachiGiaohang(String diachiGiaohang) {
+		this.diachiGiaohang = diachiGiaohang;
+	}
 
-    public String getPhuongThucThanhToan() {
-        return phuongThucThanhToan;
-    }
+	public String getPhuongThucThanhToan() {
+		return phuongThucThanhToan;
+	}
 
-    public void setPhuongThucThanhToan(String phuongThucThanhToan) {
-        this.phuongThucThanhToan = phuongThucThanhToan;
-    }
+	public void setPhuongThucThanhToan(String phuongThucThanhToan) {
+		this.phuongThucThanhToan = phuongThucThanhToan;
+	}
 
-    public Donhang() {
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Donhang() {
         // TODO Auto-generated constructor stub
-    }
-
-    public static void main(String[] args) {
-        EntityManager entity = JpaUtils.getEntityManager();
-        List<Donhang> listTK = entity.createQuery("select t from Donhang t",Donhang.class).getResultList();
-        System.out.println(listTK.get(1).getDiaChiGiaoHang());
     }
 }

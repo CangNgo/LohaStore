@@ -49,61 +49,76 @@ public class SanPham implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	// Getters and setters
+
 	public int getId() {
 		return id;
 	}
+
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-	public LoaiSanPham getIdLoaiSanPham() {
+	public LoaiSanPham getIdLoaiSanpham() {
 		return idLoaiSanpham;
 	}
 
-	public void setIdLoaiSanPham(LoaiSanPham idLoaiSanpham) {
+	public void setIdLoaiSanpham(LoaiSanPham idLoaiSanpham) {
 		this.idLoaiSanpham = idLoaiSanpham;
 	}
+
 
 	public String getTenSanpham() {
 		return tenSanpham;
 	}
 
+
 	public void setTenSanpham(String tenSanpham) {
 		this.tenSanpham = tenSanpham;
 	}
+
 
 	public String getMota() {
 		return mota;
 	}
 
+
 	public void setMota(String mota) {
 		this.mota = mota;
 	}
+
 
 	public double getGia() {
 		return gia;
 	}
 
+
 	public void setGia(double gia) {
 		this.gia = gia;
 	}
+
 
 	public int getSoluong() {
 		return soluong;
 	}
 
+
 	public void setSoluong(int soluong) {
 		this.soluong = soluong;
 	}
+
 
 	public String getHinh() {
 		return hinh;
 	}
 
+
 	public void setHinh(String hinh) {
 		this.hinh = hinh;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	public static void main(String[] args) {

@@ -26,7 +26,7 @@ INNER JOIN GioHang gh ON ctgh.ID_GioHang = gh.ID_GioHang
 INNER JOIN KhachHang kh ON gh.ID_KhachHang = kh.ID_KhachHang
 WHERE gh.ID_GioHang = 2;
 
-
+select *from KhachHang where ID_TAIKHOAN = 33
 delete ChiTietGioHang where id_ChiTietGioHang  = 11
 
 
@@ -41,27 +41,6 @@ select *from giohang
 
 update taikhoan set taikhoan = 'canguser', matkhau ='cang123123' where id =3
 go
-
-create or alter proc SP_InsertUser 
-	@tenDangnhap varchar(100), 
-	@email varchar(100), 
-	@matkhau varchar(100),
-	@hoten nvarchar(100)
-AS 
-BEGIN	
-	BEGIN TRANSACTION
-		INSERT INTO TAIKHOAN(TAIKHOAN, MATKHAU, VAITRO)
-		VALUES (@tenDangnhap, @matkhau, 'user')
-	
-		INSERT INTO KhachHang(hoten, email)
-		VALUES (@hoten, @email)
-
-		DECLARE @idKhachhang INT = SCOPE_IDENTITY();
-
-		INSERT INTO GioHang(id_khachhang, ngaytao )
-		VALUES (@idKhachhang, getdate())
-
-END
 
 
 --CHAT GPT 
@@ -87,3 +66,14 @@ select d.ID_DonHang, k.hoten, k.DiaChi, k.SoDienThoai, d.NgayDatHang, d.TongTien
 select ChiTietDonHang.ID_ChiTietDonHang, sanpham.TenSanPham, SanPham.Gia, ChiTietDonHang.SoLuong, sanpham.HinhAnh, ChiTietDonHang.SoLuong * SanPham.Gia as 'Tổng giá' from ChiTietDonHang join SanPham on ChiTietDonHang.ID_SanPham = sanpham.ID_SanPham where ID_DonHang = 4
 
 select *from sanpham
+use banhang
+
+select * from DonHang 
+
+select * from ChiTietDonHang 
+
+select * from ChiTietGioHang
+
+select *from taikhoan where 
+
+select *from LoaiSanPham

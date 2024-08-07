@@ -109,6 +109,36 @@ function checkOut() {
   // Cập nhật href của thẻ a
   checkoutLink.setAttribute('href', url);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const userIcon = document.querySelector('div.user-icon');
+    
+    userIcon.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        fetch('/user-profile', {
+            method: 'GET',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Xử lý phản hồi từ server ở đây
+            console.log(data);
+            // Ví dụ: cập nhật nội dung trang
+            // document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    });
+});
 var app = angular.module("myapp", ["ngRoute"]);
 app.config(function ($routeProvider) {
   $routeProvider
@@ -163,7 +193,7 @@ app.config(function ($routeProvider) {
 	.otherwise({
 	  templateUrl: "/views/web/home.jsp ?" + Math.random(),
 	});
-});
+});/*
 app.run(function ($rootScope) {
   $rootScope.$on("$routeChangeStart", function () {
 	$rootScope.loading = true;
@@ -175,7 +205,7 @@ app.run(function ($rootScope) {
 	$rootScope.loading = false;
 	alert("Lỗi không tải được trang");
   });
-});
+});*/
 app.service("sharedService", function() {
 	this.searchText = {
 		searchName: "",

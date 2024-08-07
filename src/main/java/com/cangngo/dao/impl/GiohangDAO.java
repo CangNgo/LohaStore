@@ -21,24 +21,26 @@ public class GiohangDAO implements IGiohangDAO {
 
 		List<CartItem> cartItems = null;
 		try (EntityManager entity = JpaUtils.getEntityManager()) {
-			TypedQuery<Object[]> query = entity.createQuery(
-					"SELECT ctgh.id, ctgh.soluong, sp.tenSanpham, sp.gia, sp.hinh " + "FROM Chitietgiohang ctgh "
-							+ "INNER JOIN ctgh.idSanpham sp " + "INNER JOIN ctgh.idGiohang gh "
-							+ "INNER JOIN gh.idKhachhang kh " + "WHERE gh.id = :giohangid",
-					Object[].class);
+			TypedQuery<Object[]> query = entity
+					.createQuery("SELECT ctgh.id, ctgh.soluong, sp.tenSanpham, sp.gia, sp.hinh, sp.id "
+							+ "FROM Chitietgiohang ctgh " + "INNER JOIN ctgh.idSanpham sp "
+							+ "INNER JOIN ctgh.idGiohang gh " + "INNER JOIN gh.idKhachhang kh "
+							+ "WHERE gh.id = :giohangid", Object[].class);
 			query.setParameter("giohangid", giohangid);
 			List<Object[]> results = query.getResultList();
 			cartItems = results.stream().map(result -> new CartItem((Integer) result[0], (Integer) result[1],
-					(String) result[2], (Double) result[3], (String) result[4])).collect(Collectors.toList());
+					(String) result[2], (Double) result[3], (String) result[4], (Integer) result[5]))
+					.collect(Collectors.toList());
 
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			// TODO: handle exception
 		}
 		return cartItems;
 	}
 
-//	public static void main(String[] args) {
-//		GiohangDAO dao = new GiohangDAO();
-//		dao.findAllByIdUser();
-//	}
+	public static void main(String[] args) {
+		GiohangDAO dao = new GiohangDAO();
+		dao.findAllByIdUser(1);
+	}
 }

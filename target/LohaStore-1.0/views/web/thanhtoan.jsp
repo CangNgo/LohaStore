@@ -3,7 +3,7 @@
 
 <%@ include file="/common/taglib.jsp"%>
 <!-- content  -->
-<div id="pay">
+<div id="pay" ng-controller="thanhtoanCtrl">
 	<div class="container">
 		<div class="row justify-content-between">
 			<div class="col-md-5 col-sm-12 c-pay-left offset-md-1">
@@ -44,10 +44,10 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<c:if test="${not empty message }">
+				<c:if test="${not empty messageNotenough }">
 					<div class="alert alert-${alert }">
 						<c:forEach var="product" items="${PRODUCT_NOT_ENOUGH }">
-							<div>Sản phẩm ${product } không có đủ số lượng</div>
+							<div>Sản phẩm ${messageNotenough } không có đủ số lượng</div>
 						</c:forEach>
 					</div>
 				</c:if>
@@ -76,7 +76,7 @@
 					<div class="box-price d-flex justify-content-between">
 						<p class="box-price-text fw-bold m-0 fs-4">Tổng tiền:</p>
 						<p class="box-price-value fw-bold fs-5 m-0">
-							{{sumPrice |number}}<span>đ</span>
+							${totalOrder }<span>đ</span>
 						</p>
 					</div>
 				</div>
@@ -86,32 +86,29 @@
 							<a href="#!/giohang"><i class="fa-solid fa-chevron-left "></i>
 								Quay về giỏ hàng</a>
 						</p>
-						<form action="#!success">
-							<button type="{{address.$valid?'submit':'button'}}"
-								ng-click="checkForm(address.$valid)"
-								class="btn text-uppercase fs-5 c-input-pay">Thanh toán</button>
-						</form>
+
 					</div>
 				</div>
 			</div>
 			<div class="col-md-5 col-sm-12 ms-5">
 				<p class="h5">Thông tin nhận hàng</p>
-				<form action="" name="address">
+				<form action="<c:url value ='/thanh-toan?action=thanh-toan'/>"
+					method="post" name="address">
 					<div class="address">
 						<div class="form-email mb-2">
 							<input type="email" id="email" name="email"
 								class="form-control {{address.email.$touched && address.email.$invalid?'box-input-input-invalid':''}}"
-								placeholder="Email" required ng-model="email">
+								placeholder="email: Example@gmail.com" required ng-model="email">
 						</div>
 						<div class="form-name mb-2">
 							<input type="text" id="name" name="name"
 								class="form-control  {{address.name.$touched && address.name.$invalid?'box-input-input-invalid':''}}"
-								placeholder="Họ và tên" ng-model="name" required>
+								placeholder="Họ và tên: Nguyễn Văn A" ng-model="name" required>
 						</div>
 						<div class="form-phoneNumber mb-2">
 							<input type="text" id="phoneNumber" name="phoneNumber"
 								class="form-control  {{address.phoneNumber.$touched && address.phoneNumber.$invalid?'box-input-input-invalid':''}}"
-								placeholder="Số điện thoại" ng-model="phoneNumber" required>
+								placeholder="Số điện thoại: 0123456789" ng-model="phoneNumber" required>
 						</div>
 						<div class="form-provine mb-2">
 							<select name="provine" id="provine" class="form-select"
@@ -146,10 +143,20 @@
 								style="height: 100px;"></textarea>
 							<label for="note">Ghi chú</label>
 						</div>
+						<input type="hidden" name="selectedTinh"
+							ng-value="selectedTinh.Name"> <input type="hidden"
+							name="selectedHuyen" ng-value="selectedHuyen.Name"> <input
+							type="hidden" name="selectedXa" ng-value="selectedXa.Name">
+						<div class="box-pay mt-3 d-flex justify-content-end">
+							<div class="box-pay-item d-flex justify-content-between">
+								<button type="{{address.$valid?'submit':'button'}}"
+									ng-click="checkForm(address.$valid)"
+									class="btn text-uppercase fs-5 c-input-pay">Thanh toán</button>
+							</div>
+						</div>
 					</div>
 				</form>
-				<c:if test="${empty CARTITMEINORDER }">đơn dặt hàng đang rỗng</c:if>
-				<c:if test="${not empty CARTITMEINORDER }">đơn dặt hàng không rỗng</c:if>
+				
 			</div>
 		</div>
 	</div>

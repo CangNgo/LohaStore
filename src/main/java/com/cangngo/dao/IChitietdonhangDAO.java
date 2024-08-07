@@ -1,5 +1,9 @@
 package com.cangngo.dao;
 
-public interface IChitietdonhangDAO {
+import java.util.List;
 
+import com.cangngo.model.CartItem;
+
+public interface IChitietdonhangDAO {
+	boolean insertCTDonhang(int idDonhang, List<CartItem> listCart);
 }

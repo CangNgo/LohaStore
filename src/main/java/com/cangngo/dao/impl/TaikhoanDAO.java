@@ -20,30 +20,25 @@ public class TaikhoanDAO implements ITaikhoanDAO {
 	@Override
 	public UserModel findUserByUsername(String username, String password) {
 		List<UserModel> models = null;
-		UserModel usermodel = null;
 		try (EntityManager entity = JpaUtils.getEntityManager()) {
-			List<Object[]> results = null;
-			TypedQuery<Object[]> objects = entity
-					.createQuery("SELECT t.taiKhoan, t.matKhau, k.hoten, k.id,g.id, t.vaitro " + "FROM KhachHang k "
+			TypedQuery<Object[]> query = entity
+					.createQuery("SELECT t.taiKhoan, t.matKhau, k.hoten, k.id, g.id, t.vaitro " + "FROM KhachHang k "
 							+ "JOIN k.idTaikhoan t " + "LEFT JOIN Giohang g ON k.id = g.idKhachhang.id "
-							+ "where t.taiKhoan =:taikhoan "
-							+ "GROUP BY t.taiKhoan, t.matKhau, k.hoten, k.id, g.id, t.vaitro", Object[].class);
-			objects.setParameter("taikhoan", username);
-			results = objects.getResultList();
-			// chuyen tu object mang usermodel
+							+ "WHERE t.taiKhoan = :taikhoan", Object[].class);
+			query.setParameter("taikhoan", username);
+			List<Object[]> results = query.getResultList();
 
 			if (!results.isEmpty()) {
 				models = results.stream()
 						.map(result -> new UserModel((String) result[0], (String) result[1], (String) result[2],
-								(Integer) result[3], (Integer) result[4], (boolean) result[5] ? "ADMIN" : "USER"))
+								(Integer) result[3], result[4] != null ? (Integer) result[4] : null,
+								(boolean) result[5] ? "ADMIN" : "USER"))
 						.collect(Collectors.toList());
-				return models.getFirst();
+				return models.get(0);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			return null;
 		}
-
 		return null;
 	}
 

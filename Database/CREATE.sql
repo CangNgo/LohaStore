@@ -226,7 +226,7 @@ VALUES
 
 
 	
-EXEC SP_InsertUser	'ngotancanghẻthesdfrr', 'cangngoooodfo12', 'cang123123', 'Ngô Tấn Cang'
+EXEC SP_InsertUser	'cangliengglien', 'cangngoollieoođàdfo12', 'cangliehgnlien', 'Ngô Tấn Cang'
 GO
 CREATE OR ALTER PROC SP_InsertUser 
     @tenDangnhap VARCHAR(100), 
@@ -266,11 +266,20 @@ BEGIN
     END CATCH
 END
 
+use banhang
+
 SELECT * FROM KHACHHANG WHERE Hoten = N'Ngô Tấn Cang'
 go 
 
-select *from taikhoan
 
 select * from SanPham join LoaiSanPham on SanPham.ID_LoaiSanPham = LoaiSanPham.ID_LoaiSanPham where LoaiSanPham.TenLoai = 'hoalen'
  
-select count(taikhoan) from taikhoan where taikhoan = 'cangadmin'
+select count(taikhoan) from taikhoan where taikhoan = 'canglien'
+
+select *from TAIKHOAN
+
+select *from khachhang 
+
+select *from donhang
+
+select * from SanPham

@@ -76,7 +76,7 @@
 						<div class="col-md-6 col-sm-1 user d-flex justify-content-end m-0">
 							<div class="user-text">
 								<c:if test="${not empty userModel }">
-								<a href="account/dang-nhap?action=login"
+								<a href="user-profile"
 									class="m-0 text-decoration-none">${userModel.name }</a>
 								</c:if>
 								<c:if test="${empty userModel }">

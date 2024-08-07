@@ -15,51 +15,46 @@
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="admin-home">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>Trang chủ</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="admin-user">
                         <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
+                        <p>Thông tin</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="admin-orders">
                         <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
+                        <p>Đơn hàng</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
+                
+                  <li>
+                    <a href="admin-products">
+                        <i class="pe-7s-note2"></i>
+                        <p>Sản phẩm</p>
                     </a>
                 </li>
                 <li>
-                    <a href="maps.html">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
+                    <a href="admin-user">
+                        <i class="pe-7s-note2"></i>
+                        <p>Người dùng</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="#">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Thông báo </p>
                     </a>
                 </li>
 				<li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="#">
                         <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
+                        <p>Cập nhật</p>
                     </a>
                 </li>
             </ul>

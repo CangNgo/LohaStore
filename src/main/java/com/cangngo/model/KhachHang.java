@@ -21,7 +21,11 @@ import jakarta.persistence.TemporalType;
 @Entity
 @Table(name = "KhachHang")
 public class KhachHang implements Serializable {
-    @Id
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_KhachHang")
     private int id;
@@ -43,6 +47,11 @@ public class KhachHang implements Serializable {
     @Column(name = "NgayDangKy")
 	private Date ngayDangky;
 
+	public KhachHang() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public KhachHang(int id, Taikhoan idTaikhoan, String hoten, String email, String soDienthoai, String diachi,
 			Date ngaysinh, Date ngayDangky) {
         this.id = id;
@@ -55,73 +64,73 @@ public class KhachHang implements Serializable {
 		this.ngayDangky = ngayDangky;
     }
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public Taikhoan getIdTaikhoan() {
-        return idTaikhoan;
-    }
+	public Taikhoan getIdTaikhoan() {
+		return idTaikhoan;
+	}
 
-    public void setIdTaikhoan(Taikhoan idTaikhoan) {
-        this.idTaikhoan = idTaikhoan;
-    }
+	public void setIdTaikhoan(Taikhoan idTaikhoan) {
+		this.idTaikhoan = idTaikhoan;
+	}
 
-    public String getHoten() {
-        return hoten;
-    }
+	public String getHoten() {
+		return hoten;
+	}
 
-    public void setHoten(String hoten) {
-        this.hoten = hoten;
-    }
+	public void setHoten(String hoten) {
+		this.hoten = hoten;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getSoDienThoai() {
+	public String getSoDienthoai() {
 		return soDienthoai;
-    }
+	}
 
-	public void setSoDienThoai(String soDienthoai) {
+	public void setSoDienthoai(String soDienthoai) {
 		this.soDienthoai = soDienthoai;
-    }
+	}
 
-    public String getDiaChi() {
+	public String getDiachi() {
 		return diachi;
-    }
+	}
 
-	public void setDiaChi(String diachi) {
+	public void setDiachi(String diachi) {
 		this.diachi = diachi;
-    }
+	}
 
-    public Date getNgaysinh() {
-        return ngaysinh;
-    }
+	public Date getNgaysinh() {
+		return ngaysinh;
+	}
 
-    public void setNgaysinh(Date ngaysinh) {
-        this.ngaysinh = ngaysinh;
-    }
+	public void setNgaysinh(Date ngaysinh) {
+		this.ngaysinh = ngaysinh;
+	}
 
-    public Date getNgayDangKy() {
+	public Date getNgayDangky() {
 		return ngayDangky;
-    }
+	}
 
-	public void setNgayDangKy(Date ngayDangky) {
+	public void setNgayDangky(Date ngayDangky) {
 		this.ngayDangky = ngayDangky;
-    }
+	}
 
-    public KhachHang() {
-        // TODO Auto-generated constructor stub
-    }
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	public static void main(String[] args) {
 		EntityManager entity = JpaUtils.getEntityManager();

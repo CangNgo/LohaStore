@@ -26,14 +26,13 @@ public class Giohang extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private IGiohangService giohangService;
 	private IChitietgiohangService ctGiohangService;
-	private IChitietgiohangService ctgiohangService;
 
 	@Override
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
 		super.init();
-		giohangService = new GiohangService();
 		ctGiohangService = new ChitietgiohangService();
+		giohangService = new GiohangService();
 	}
 
 	/**
@@ -82,7 +81,7 @@ public class Giohang extends HttpServlet {
 					if (usermodel != null) {
 						// lấy id giỏ hàng từ thông tin đăng nhạp
 						idGiohang = usermodel.getIdGiohang();
-						ctgiohangService.insertChitietgiohang(idGiohang, productId, price);
+						ctGiohangService.insertChitietgiohang(idGiohang, productId, price);
 						// cập nhật lại số lượng sản phẩm trong giỏ hàng
 						HttpSession session = request.getSession();
 						String cartNumber = (String) session.getAttribute("cartNumber");
@@ -101,7 +100,7 @@ public class Giohang extends HttpServlet {
 		} else if (uri.contains("/xoa-chi-tiet-san-pham")) {
 			try {
 				int idChitietgiohang = Integer.parseInt(request.getParameter("idChitietgiohang"));
-				ctgiohangService.removeChitietgiohang(idChitietgiohang);
+				ctGiohangService.removeChitietgiohang(idChitietgiohang);
 				UserModel userModel = (UserModel) SessionUtil.getInstance().getValue(request, "userModel");
 				if (userModel != null) {
 

@@ -63,4 +63,24 @@
     <servlet-name>Thanhtoan</servlet-name>
     <url-pattern>/Thanhtoan</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserProfile</display-name>
+    <servlet-name>UserProfile</servlet-name>
+    <servlet-class>com.cangngo.controller.web.UserProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserProfile</servlet-name>
+    <url-pattern>/UserProfile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewLoaiSP</display-name>
+    <servlet-name>NewLoaiSP</servlet-name>
+    <servlet-class>com.cangngo.controller.admin.NewLoaiSP</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewLoaiSP</servlet-name>
+    <url-pattern>/NewLoaiSP</url-pattern>
+  </servlet-mapping>
 </web-app>

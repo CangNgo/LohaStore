@@ -1,5 +1,9 @@
 package com.cangngo.dao;
 
-public interface IKhachhangDAO {
+import com.cangngo.model.KhachHang;
 
+public interface IKhachhangDAO {
+	public KhachHang findKhachhangByid(int idKhachhang);
+
+	KhachHang updateProfile(KhachHang kh);
 }

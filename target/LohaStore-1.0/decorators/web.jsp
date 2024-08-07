@@ -24,19 +24,34 @@
 	href="<c:url value ='/template/web/css/giohang.css' />">
 <link rel="stylesheet"
 	href="<c:url value= '/template/web/css/dangnhap.css'/>">
+<!-- Bootstrap core CSS     -->
+<link href="<c:url value ='/template/admin/assets/css/bootstrap.min.css'/>" rel="stylesheet" />
+
+<!-- Animation library for notifications   -->
+<link href="<c:url value ='/template/admin/assets/css/animate.min.css' />" rel="stylesheet" />
+
+<link
+	href="<c:url value ='/template/admin/assets/css/light-bootstrap-dashboard.css?v=1.4.0' />"
+	rel="stylesheet" />
+
+
+<!--  CSS for Demo Purpose, don't include it in your project     -->
+<link href="<c:url value ='/template/admin/assets/css/demo.css' />"
+	rel="stylesheet" />
+
 </head>
 <body data-ng-app="myapp" data-ng-controller="myCtrl">
 	<!-- header -->
 	<%@include file="/common/web/header.jsp"%>
 	<div id="maincontent"></div>
-	
+
 	<!-- content -->
 	<div class="container">
 		<dec:body />
 	</div>
- 	<!-- end content -->
- 	
- 	<!-- footer -->
+	<!-- end content -->
+
+	<!-- footer -->
 	<%@include file="/common/web/footer.jsp"%>
 	<!-- end footer -->
 	<!-- script file -->
@@ -50,10 +65,13 @@
 		data-crossorigin="anonymous"></script>
 	<script type="text/javascript"
 		src="<c:url value='/template/web/js/angular.min.js'/>"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="<c:url value= '/template/web/js/angular-route.min.js' />"></script>
 	<script src="<c:url value= '/template/web/js/app.js'/>"></script>
 	<script src="<c:url value= '/template/web/js/sanpham.json'/>"></script>
 	<script src="<c:url value= '/template/web/js/checkBooostrap.js' />"></script>
+	
+	
 </body>
 </html>

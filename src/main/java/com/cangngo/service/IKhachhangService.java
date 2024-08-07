@@ -1,5 +1,9 @@
 package com.cangngo.service;
 
-public interface IKhachhangService {
+import com.cangngo.model.KhachHang;
 
+public interface IKhachhangService {
+	public KhachHang findKhachhangByid(int idKhachhang);
+
+	KhachHang updateProfile(KhachHang kh);
 }

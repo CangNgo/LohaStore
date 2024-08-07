@@ -6,6 +6,7 @@ public class CartItem {
 	private String tenSanpham;
 	private double gia;
 	private String hinhanh;
+	private int idSanpham;
 
 	public CartItem(int idCTGioHang, int soLuong, String tenSanpham, double gia,
 			String hinhanh) {
@@ -15,6 +16,16 @@ public class CartItem {
 		this.tenSanpham = tenSanpham;
 		this.gia = gia;
 		this.hinhanh = hinhanh;
+	}
+
+	public CartItem(int idCTGioHang, int soLuong, String tenSanpham, double gia, String hinhanh, int idSanpham) {
+		super();
+		this.idCTGioHang = idCTGioHang;
+		this.soLuong = soLuong;
+		this.tenSanpham = tenSanpham;
+		this.gia = gia;
+		this.hinhanh = hinhanh;
+		this.idSanpham = idSanpham;
 	}
 
 	public int getIdCTGioHang() {
@@ -55,6 +66,14 @@ public class CartItem {
 
 	public void setHinhanh(String hinhanh) {
 		this.hinhanh = hinhanh;
+	}
+
+	public int getIdSanpham() {
+		return idSanpham;
+	}
+
+	public void setIdSanpham(int idSanpham) {
+		this.idSanpham = idSanpham;
 	}
 
 	public CartItem() {

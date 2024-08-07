@@ -1,5 +1,11 @@
 package com.cangngo.service;
 
-public interface IDonhangService {
+import java.util.List;
 
+import com.cangngo.model.Donhang;
+
+public interface IDonhangService {
+	int insertDonhang(Donhang donhang);
+
+	List<Donhang> findAll();
 }

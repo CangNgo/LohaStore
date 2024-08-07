@@ -1,9 +1,13 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/cangngo/controller/admin/HomeController.java=UTF-8
+encoding//src/main/java/com/cangngo/controller/admin/UserController.java=UTF-8
 encoding//src/main/java/com/cangngo/controller/web/Dangky.java=UTF-8
 encoding//src/main/java/com/cangngo/controller/web/Dangnhap.java=UTF-8
 encoding//src/main/java/com/cangngo/controller/web/Giohang.java=UTF-8
 encoding//src/main/java/com/cangngo/controller/web/Thanhtoan.java=UTF-8
+encoding//src/main/java/com/cangngo/controller/web/UserProfile.java=UTF-8
 encoding//src/main/java/com/cangngo/dao/impl/ChitietgiohangDAO.java=UTF-8
+encoding//src/main/java/com/cangngo/dao/impl/DonhangDAO.java=UTF-8
 encoding//src/main/java/com/cangngo/dao/impl/SanphamDAO.java=UTF-8
 encoding//src/main/java/com/cangngo/dao/impl/TaikhoanDAO.java=UTF-8
 encoding//src/main/java/com/cangngo/service/impl/TaikhoanService.java=UTF-8
