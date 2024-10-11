@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/common/taglib.jsp"%>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-sm-6 mb-4">
@@ -65,7 +64,7 @@
 							<div class="col-md-4">
 								<div class="box-item-releted">
 									<div class="box-item-img">
-										<img src="/ASM/asset/img/GAUVALAVENDER.jpg" alt=""
+										<img src="<c:url value='/template/web/img/GAUVALAVENDER.jpg'/>" alt=""
 											class="w-100 rounded-5">
 									</div>
 									<div class="box-item-info text-center">
@@ -77,7 +76,7 @@
 							<div class="col-md-4">
 								<div class="box-item-releted">
 									<div class="box-item-img">
-										<img src="/ASM/asset/img/GAUVALAVENDER.jpg" alt=""
+										<img src="<c:url value='/template/web/img/GAUVALAVENDER.jpg'/>" alt=""
 											class="w-100 rounded-5">
 									</div>
 									<div class="box-item-info text-center">
@@ -89,7 +88,7 @@
 							<div class="col-md-4">
 								<div class="box-item-releted">
 									<div class="box-item-img">
-										<img src="/ASM/asset/img/GAUVALAVENDER.jpg" alt=""
+										<img src="<c:url value='/template/web/img/GAUVALAVENDER.jpg'/>" alt=""
 											class="w-100 rounded-5">
 									</div>
 									<div class="box-item-info text-center">
@@ -101,7 +100,7 @@
 							<div class="col-md-4">
 								<div class="box-item-releted">
 									<div class="box-item-img">
-										<img src="/ASM/asset/img/GAUVALAVENDER.jpg" alt=""
+										<img src="<c:url value='/template/web/img/GAUVALAVENDER.jpg'/>" alt=""
 											class="w-100 rounded-5">
 									</div>
 									<div class="box-item-info text-center">
@@ -114,7 +113,7 @@
 							<div class="col-md-4">
 								<div class="box-item-releted">
 									<div class="box-item-img">
-										<img src="/ASM/asset/img/GAUVALAVENDER.jpg" alt=""
+										<img src="<c:url value='/template/web/img/GAUVALAVENDER.jpg'/>" alt=""
 											class="w-100 rounded-5">
 									</div>
 									<div class="box-item-info text-center">
@@ -126,7 +125,7 @@
 							<div class="col-md-4">
 								<div class="box-item-releted">
 									<div class="box-item-img">
-										<img src="/ASM/asset/img/GAUVALAVENDER.jpg" alt=""
+										<img src="<c:url value='/template/web/img/GAUVALAVENDER.jpg'/>" alt=""
 											class="w-100 rounded-5">
 									</div>
 									<div class="box-item-info text-center">
