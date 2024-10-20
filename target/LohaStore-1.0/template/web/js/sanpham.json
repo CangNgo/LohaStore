@@ -1,0 +1,142 @@
+[
+	{
+		"id": 2,
+		"image": "cuchoami.jpg",
+		"name": "Cúc họa mi",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 6,
+		"image": "hoacuc.jpg",
+		"name": "Hoa cúc",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 7,
+		"image": "hoadoixanh.png",
+		"name": "Hoa đôi xanh",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 8,
+		"image": "hoahong.jpg",
+		"name": "Hoa hồng",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 10,
+		"image": "hoahongnho.jpg",
+		"name": "Hoa hồng nhỏ",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 11,
+		"image": "HOALUULY.jpg",
+		"name": "Hoa lưu ly",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 12,
+		"image": "HOATLIPCANH.jpg",
+		"name": "Hoa Tulip",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 14,
+		"image": "hongtrang.jpg",
+		"name": "Hoa hồng trắng",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 15,
+		"image": "huongduong.webp",
+		"name": "Hoa hướng dương",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 17,
+		"image": "lavender.jpg",
+		"name": "Hoa Lavender",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 9,
+		"image": "HOAHONGGHEPCANH.jpg",
+		"name": "Hoa hồng ghép cạnh",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 13,
+		"image": "HOATULIPCOCANH.jpg",
+		"name": "Hoa Tulip có cánh",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 22,
+		"image": "sg-11134201-23020-sf0x8fu25env02.jpg",
+		"name": "Cành hoa nhỏ",
+		"price": 50000,
+		"loai": "hoalen"
+	},
+	{
+		"id": 1,
+		"image": "bo.jpg",
+		"name": "Bơ len",
+		"price": 50000,
+		"loai": "mockhoa"
+	},
+	{
+		"id": 3,
+		"image": "dangnhap.jpg",
+		"name": "Móc khóa cá heo",
+		"price": 50000,
+		"loai": "mockhoa"
+	},
+	{
+		"id": 4,
+		"image": "duahau.jpg",
+		"name": "Dưa hấu len",
+		"price": 50000,
+		"loai": "mockhoa"
+	},
+	{
+		"id": 5,
+		"image": "heo.jpg",
+		"name": "Heo len",
+		"price": 50000,
+		"loai": "mockhoa"
+	},
+	{
+		"id": 16,
+		"image": "images.jpg",
+		"name": "Móc treo hình hoa",
+		"price": 50000,
+		"loai": "mockhoa"
+	},
+	{
+		"id": 23,
+		"image": "hoahong.jpg",
+		"name": "Hoa hồng",
+		"price": 50000,
+		"loai": "mockhoa"
+	},
+	{
+		"id": 24,
+		"image": "VITLENDOIMU.jpg",
+		"name": "Vịt len đội mũ",
+		"price": 50000,
+		"loai": "mockhoa"
+	}
+]

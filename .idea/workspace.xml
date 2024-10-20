@@ -4,12 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="749452be-c09b-445a-95a7-9f5d168cedfb" name="Changes" comment="" />
+=======
+    <list default="true" id="5343f244-3b55-4c79-a731-47d7b6a9200d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/JPA_2_1_JPA_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jsp_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LohaStore_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LohaStore_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LohaStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LohaStore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/chitietsanpham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/chitietsanpham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangnhap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Dangnhap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Doimatkhau.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Doimatkhau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Giohang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Giohang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Hoalen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Hoalen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Layma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Layma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Lienhe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Lienhe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Mockhoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/controller/web/Mockhoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/AbstractModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/AbstractModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietdonhang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietdonhang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietgiohang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Chitietgiohang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Donhang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Donhang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/Giohang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/Giohang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/KhachHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/KhachHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/LoaiSanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/LoaiSanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/SanPham.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/SanPham.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/model/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/model/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietdonhangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietdonhangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietgiohangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/ChitietgiohangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/GiohangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/GiohangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/KhachhangService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/KhachhangService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/LoaisanphamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/LoaisanphamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/SanphamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cangngo/service/impl/SanphamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.cangngo/LohaStore/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.cangngo/LohaStore/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.cangngo/LohaStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.cangngo/LohaStore/pom.xml" afterDir="false" />
+    </list>
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -17,6 +60,10 @@
         <option value="Class" />
       </list>
     </option>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -25,6 +72,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+<<<<<<< HEAD
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
@@ -32,28 +80,47 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2kUC063B4Wxu01kNFiqVJ4NHF9q" />
+=======
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2kM0ipMsNAvb77evmW7TEJluX6y" />
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
     "Application.Khachhang.executor": "Run",
+=======
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "Smart Tomcat.Tomcat: PS36910_NgoTanCang_BaoVe.executor": "Run",
     "Smart Tomcat.Tomcat: Thithulan1.executor": "Run",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/workspace/PS36910_ASM",
+=======
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Smart Tomcat.LohaStore.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/workspace/PS36910_NgoTanCang_ASM",
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -80,22 +147,81 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+=======
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.53103447",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="PS36910_NgoTanCang_ASM" />
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Tomcat: PS36910_NgoTanCang_BaoVe" type="com.poratu.idea.plugins.tomcat" temporary="true">
+=======
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="PS36910_NgoTanCang_ASM" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="PS36910_NgoTanCang_ASM" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LohaStore" type="com.poratu.idea.plugins.tomcat">
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
+<<<<<<< HEAD
       <option name="adminPort" value="8085" />
       <option name="catalinaBase" value="C:\workspace\PS36910_NgoTancang_Baove" />
       <option name="contextPath" value="/PS36910_NgoTanCang_BaoVe" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
       <option name="extraClassPath" value="" />
       <option name="port" value="8081" />
+=======
+      <option name="catalinaBase" value="C:\Users\acer\.SmartTomcat\PS36910_NgoTanCang_ASM\LohaStore" />
+      <option name="contextPath" value="/LohaStore" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
       <option name="tomcatInfo">
         <TomcatInfo>
           <option name="name" value="Apache Tomcat/10.1.25" />
@@ -104,11 +230,16 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
+<<<<<<< HEAD
       <module name="PS36910_ASM" />
+=======
+      <module name="LohaStore" />
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <list>
       <item itemvalue="Application.Khachhang" />
       <item itemvalue="Smart Tomcat.Tomcat: PS36910_NgoTanCang_BaoVe" />
@@ -119,6 +250,42 @@
         <item itemvalue="Application.Khachhang" />
       </list>
     </recent_temporary>
+=======
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="PS36910_NgoTanCang_ASM" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="PS36910_NgoTanCang_ASM" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -131,6 +298,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="749452be-c09b-445a-95a7-9f5d168cedfb" name="Changes" comment="" />
       <created>1723328541505</created>
       <option name="number" value="Default" />
@@ -143,12 +311,27 @@
       <workItem from="1723411639945" duration="16443000" />
       <workItem from="1723440949485" duration="542000" />
       <workItem from="1723445708435" duration="1097000" />
+=======
+      <changelist id="5343f244-3b55-4c79-a731-47d7b6a9200d" name="Changes" comment="" />
+      <created>1723078268080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723078268080</updated>
+      <workItem from="1723078269185" duration="92000" />
+      <workItem from="1723127498794" duration="59000" />
+      <workItem from="1723185801979" duration="1076000" />
+      <workItem from="1723187102158" duration="840000" />
+      <workItem from="1723248467789" duration="1118000" />
+      <workItem from="1723257823765" duration="872000" />
+      <workItem from="1723263656044" duration="1045000" />
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -174,6 +357,8 @@
       </configuration>
     </watches-manager>
   </component>
+=======
+>>>>>>> 156687cf3efddbb16d915284bdbe7bd116026f4e
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />

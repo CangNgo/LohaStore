@@ -1,0 +1,105 @@
+:root {
+    --main-color: #F7CDD0;
+    --main-text-color: #DD4C77;
+}
+
+html {
+    position: relative;
+
+}
+
+#login {
+    height: 100vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#login .exit-form {
+    position: absolute;
+    right: 10px;
+    z-index: 30;
+}
+
+#login::before {
+    content: "";
+    position: absolute;
+    background: url(../img/dangnhap.jpg) no-repeat;
+    top: -341px;
+    right: 0px;
+    object-position: right 100%;
+    background-size: 100%;
+    width: 146%;
+    height: 264%;
+    filter: blur(2px);
+}
+
+.from-login {
+    height: 100%;
+    opacity: 1;
+}
+
+.c-from-login {
+    height: 100%;
+    align-items: center;
+}
+
+.from-login .titleLogin {
+    font-size: 50px;
+    color: #fff;
+}
+
+.box-login-different img {
+    width: 40px;
+}
+
+.box_login button {
+    background-color: var(--main-text-color);
+    color: #fff;
+}
+
+.box_login button:hover {
+    background-color: var(--main-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.box_input .box_input_input {
+    background: transparent;
+}
+
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+    box-shadow: none;
+}
+
+.from-login .wrapper {
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none;
+}
+
+.invalid-feedback {
+    font-weight: 600;
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+    box-shadow: none;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    background-image: none;
+}
+
+.box-input-input-invalid {
+    border-color: #DD4C77 !important;
+}

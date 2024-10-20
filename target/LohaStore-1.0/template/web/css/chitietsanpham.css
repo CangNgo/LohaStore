@@ -1,0 +1,48 @@
+:root {
+    --main-color: #F7CDD0;
+    --main-text-color: #DD4C77;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box-img {
+    width: 100%;
+
+}
+
+.box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-btn-price {
+    color: #fff;
+    background-color: var(--main-text-color);
+}
+
+.c-text-price {
+    color: var(--main-text-color);
+}
+
+.box-btn-addtocart {
+    color: #fff;
+    background-color: #1DA1F2;
+}
+
+.related-product {
+    width: 90%;
+}
+
+.related-product .box-related-product .box-item-info .price {
+    color: red;
+}
+
+.related-product .more-product {
+    color: var(--main-text-color);
+    cursor: pointer;
+}
